@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-31T03:15:26.712Z</updated>
+  <updated>2018-01-31T03:44:32.290Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/01/31/18.1.31-The%20First/"/>
     <id>http://yoursite.com/2018/01/31/18.1.31-The First/</id>
     <published>2018-01-31T02:09:59.495Z</published>
-    <updated>2018-01-31T03:15:26.712Z</updated>
+    <updated>2018-01-31T03:44:32.290Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考<a href="https://www.jianshu.com/p/7e6078acee6d" target="_blank" rel="noopener">简书之Markdown的小白教程</a>，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。</p></blockquote><h1 id="0x00-标题"><a href="#0x00-标题" class="headerlink" title="0x00 标题"></a>0x00 标题</h1><p>Markdown中书写标题只要在文字前加上<code>#</code>，<code>#</code>的个数越多，标题字号越小，一共有六级标题，如下：</p><pre># 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</pre><h1 id="0x01-列表"><a href="#0x01-列表" class="headerlink" title="0x01 列表"></a>0x01 列表</h1><p>列表可以分为有序和无序列表，其实只是前面项目符号不同罢了，干脆归纳到一起。<br>在前面加上<code>-</code>即可,也可以加上数字，具体效果自己操作下吧。</p><pre>- 文字- 文字- 文字... ...1. 文字2. 文字3. 文字... ...</pre> <h1 id="0x02-插入链接或图片"><a href="#0x02-插入链接或图片" class="headerlink" title="0x02 插入链接或图片"></a>0x02 插入链接或图片</h1><p>插入链接：打个比方，我要在这里加入我博客的链接，可以这样写<code>[Ecke_Lee](lisenlinsirb.github.io)</code>。</p><p>插入图片：<code>![图片下方显示的图片名(不需要文字可不写)](图片链接地址)</code>，也可以直接将本地图片拖放至插入位置。</p><h1 id="0x03-引用"><a href="#0x03-引用" class="headerlink" title="0x03 引用"></a>0x03 引用</h1><p>引用更简单只需要<code>&gt; 引用内容</code>就可以了。</p><h1 id="0x04-调整字体"><a href="#0x04-调整字体" class="headerlink" title="0x04 调整字体"></a>0x04 调整字体</h1><pre>加粗内容：**内容**斜体内容：*斜体*</pre><h1 id="0x05-代码的引用"><a href="#0x05-代码的引用" class="headerlink" title="0x05 代码的引用"></a>0x05 代码的引用</h1><p>好了，正题来了，作为一名程序员，引用代码再常见不过，Markdown中代码饮用方式如下：</p><pre>`单行代码`<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">多行代码</span><br></pre></td></tr></table></figure></pre><p>这个引用字符在<code>esc</code>下面那个按键，不是单引号!</p><p>但在使用过程中发现多行代码在电脑上似乎不能正常换行，不知上传后会不会好，可以使用如下解决方法：</p><p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样就可以啦。</p><h1 id="0x06-表格"><a href="#0x06-表格" class="headerlink" title="0x06 表格"></a>0x06 表格</h1><p>对我来说不常用，但还是说下吧</p><table><thead><tr><th style="text-align:center">Name</th><th style="text-align:right">Data</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:right">22</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考<a href="https://www.jianshu.com/p/7e6078acee6d" target="_blank" rel="noopener">简书之Markdown的小白教程</a>，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。</p></blockquote><h1 id="0x00-标题"><a href="#0x00-标题" class="headerlink" title="0x00 标题"></a>0x00 标题</h1><p>Markdown中书写标题只要在文字前加上<code>#</code>，<code>#</code>的个数越多，标题字号越小，一共有六级标题，如下：</p><pre># 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</pre><h1 id="0x01-列表"><a href="#0x01-列表" class="headerlink" title="0x01 列表"></a>0x01 列表</h1><p>列表可以分为有序和无序列表，其实只是前面项目符号不同罢了，干脆归纳到一起。<br>在前面加上<code>-</code>即可,也可以加上数字，具体效果自己操作下吧。</p><pre>- 文字- 文字- 文字... ...1. 文字2. 文字3. 文字... ...</pre> <h1 id="0x02-插入链接或图片"><a href="#0x02-插入链接或图片" class="headerlink" title="0x02 插入链接或图片"></a>0x02 插入链接或图片</h1><p>插入链接：打个比方，我要在这里加入我博客的链接，可以这样写<code>[Ecke_Lee](lisenlinsirb.github.io)</code>。</p><p>插入图片：<code>![图片下方显示的图片名(不需要文字可不写)](图片链接地址)</code>，也可以直接将本地图片拖放至插入位置。</p><h1 id="0x03-引用"><a href="#0x03-引用" class="headerlink" title="0x03 引用"></a>0x03 引用</h1><p>引用更简单只需要<code>&gt; 引用内容</code>就可以了。</p><h1 id="0x04-调整字体"><a href="#0x04-调整字体" class="headerlink" title="0x04 调整字体"></a>0x04 调整字体</h1><pre>加粗内容：**内容**斜体内容：*斜体*</pre><h1 id="0x05-代码的引用"><a href="#0x05-代码的引用" class="headerlink" title="0x05 代码的引用"></a>0x05 代码的引用</h1><p>好了，正题来了，作为一名程序员，引用代码再常见不过，Markdown中代码饮用方式如下：</p><pre>`单行代码`<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">多行代码</span><br></pre></td></tr></table></figure></pre><p>这个引用字符在<code>esc</code>下面那个按键，不是单引号!</p><p>但在使用过程中发现多行代码在电脑上似乎不能正常换行，不知上传后会不会好，可以使用如下解决方法：</p><p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样换行字符就不会被转义，就可以啦。</p><p><strong>语法着色：</strong>如果要使用语法着色，则要制定语言标识符，示例如下：</p><pre><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br></pre></td></tr></table></figure></pre><p>上面代码将会对<code>... ...</code>中<code>ruby</code>语言进行着色。<br>具体标识符定义请移步<a href="github.com/github/linguist/blob/master/lib/linguist/languages.yml">这里</a>.</p><h1 id="0x06-表格"><a href="#0x06-表格" class="headerlink" title="0x06 表格"></a>0x06 表格</h1><p>对我来说不常用，但还是说下吧</p><pre> Name | Data | other :---: | ---: | --- Lee | 22/1 | other</pre><p>重点要说的是上面第二行<code>：</code>，<code>:</code>位置指定了该列的对齐方式，左边为左对齐，右边为右对齐，两边都有则中间对齐，不加默认左对齐。</p>]]></content>
     
     <summary type="html">
     
@@ -31,27 +31,6 @@
       
         &lt;blockquote&gt;
 &lt;p&gt;Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考&lt;a href=&quot;https://www.jianshu.com/p/7e6078acee6d&quot; target=&quot;_blank&quot; rel=&quot;noop
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/01/30/hello-world/"/>
-    <id>http://yoursite.com/2018/01/30/hello-world/</id>
-    <published>2018-01-29T19:45:04.157Z</published>
-    <updated>2018-01-29T19:45:04.157Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>

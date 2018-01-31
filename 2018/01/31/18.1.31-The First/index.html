@@ -12,15 +12,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta name="description" content="SFM、机器学习、双目视觉、自动化相关">
+    <meta name="description" content="自动化、计算机、CV、Linux相关">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="MarkdownPad编辑器基础教程 | Ecke-Lee">
-    <meta name="twitter:description" content="SFM、机器学习、双目视觉、自动化相关">
+    <meta name="twitter:description" content="自动化、计算机、CV、Linux相关">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="MarkdownPad编辑器基础教程 | Ecke-Lee">
-    <meta property="og:description" content="SFM、机器学习、双目视觉、自动化相关">
+    <meta property="og:description" content="自动化、计算机、CV、Linux相关">
 
     
     <meta name="author" content="LI Senlin">
@@ -62,7 +62,7 @@
         <span class="panel-cover__subtitle panel-subtitle">稳扎、稳打</span>
         
         <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">SFM、机器学习、双目视觉、自动化相关</p>
+        <p class="panel-cover__description">自动化、计算机、CV、Linux相关</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
         <div class="navigation-wrapper">
@@ -188,47 +188,29 @@
 
 <p>这个引用字符在<code>esc</code>下面那个按键，不是单引号!</p>
 <p>但在使用过程中发现多行代码在电脑上似乎不能正常换行，不知上传后会不会好，可以使用如下解决方法：</p>
-<p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样就可以啦。</p>
+<p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样换行字符就不会被转义，就可以啦。</p>
+<p><strong>语法着色：</strong>如果要使用语法着色，则要制定语言标识符，示例如下：</p>
+<pre>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">... ...</span><br></pre></td></tr></table></figure>
+
+</pre>
+
+<p>上面代码将会对<code>... ...</code>中<code>ruby</code>语言进行着色。<br>具体标识符定义请移步<a href="github.com/github/linguist/blob/master/lib/linguist/languages.yml">这里</a>.</p>
 <h1 id="0x06-表格"><a href="#0x06-表格" class="headerlink" title="0x06 表格"></a>0x06 表格</h1><p>对我来说不常用，但还是说下吧</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Name</th>
-<th style="text-align:right">Data</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:right">22</td>
-</tr>
-</tbody>
-</table>
+<pre>
+ Name | Data | other
+ :---: | ---: | ---
+ Lee | 22/1 | other
+</pre>
+
+<p>重点要说的是上面第二行<code>：</code>，<code>:</code>位置指定了该列的对齐方式，左边为左对齐，右边为右对齐，两边都有则中间对齐，不加默认左对齐。</p>
 
   </section>
 
 </article>
 
 <section class="read-more">
-           
-    
-        
-        
-               
-            <div class="read-more-item">
-                <span class="read-more-item-dim">以前の記事</span>
-                <h2 class="post-list__post-title post-title"><a href="/2018/01/30/hello-world/" title="Hello World">Hello World</a></h2>
-                <p class="excerpt">
-                
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-                &hellip;
-                </p>
-                <div class="post-list__meta"><time datetime="2018-01-29T19:45:04.157Z" class="post-list__meta--date date">2018-01-30</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2018/01/30/hello-world/">继续阅读</a></div>
-                       
-            </div>
-        
      
-   
    
   
 </section>
