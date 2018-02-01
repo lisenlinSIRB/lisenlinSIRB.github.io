@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="z">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>使用GitHub Pages和Hexo快速建立私人Blog（1） | Ecke-Lee</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="自动化、计算机、CV、Linux相关">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="使用GitHub Pages和Hexo快速建立私人Blog（1） | Ecke-Lee">
+    <meta name="twitter:description" content="自动化、计算机、CV、Linux相关">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="使用GitHub Pages和Hexo快速建立私人Blog（1） | Ecke-Lee">
+    <meta property="og:description" content="自动化、计算机、CV、Linux相关">
+
+    
+    <meta name="author" content="LI Senlin">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="Ecke-Lee" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://yoursite.com/2018/02/01/18.2.1-build your blog/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 Ecke-Lee 的主页"><img src="/images/avatar.jpg" width="80" alt="Ecke-Lee logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for Ecke-Lee">Ecke-Lee</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">稳扎、稳打</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">自动化、计算机、CV、Linux相关</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="Blogを読む" class="blog-button">Blog</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/lisenlinsirb" title="GitHub" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2018-02-01T06:08:10.453Z" class="post-list__meta--date date">2018-02-01</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <span class="page-pv">
+       No. <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">使用GitHub Pages和Hexo快速建立私人Blog（1）</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>本文主要介绍如何使用GitHub Pages和Hexo建立一个私人专属的Blog，在这里，你可以自定义网页主题风格，板块分类等等。这里我尽量写的简明易懂，面向初学者。</p>
+</blockquote>
+<h1 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h1><h2 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h2><p>至于为什么选择GitHub，其一是免费，其二就不用多说了，这是发展趋势。</p>
+<p><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>原本用于介绍托管在GitHub上的项目，不过，由于他的空间免费稳定，用来搭建一个博客再好不过了。</p>
+<blockquote>
+<p>GitHub Pages可以被认为是用户编写的、托管在Github上的静态网页。</p>
+</blockquote>
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>,引用官网的介绍<code>A fast, simple &amp; powerful blog framework</code>，翻译过来即<code>一个快速、简单、功能强大的博客框架</code>，相比于JekyII，真的很简单（看了教程一大堆的环境就没欲望继续配置了），这也是为什么这里使用<code>Hexo</code>搭建的原因，当然也有可能有其他更好的。</p>
+<h1 id="0x01-创建GitHub-Pages"><a href="#0x01-创建GitHub-Pages" class="headerlink" title="0x01 创建GitHub Pages"></a>0x01 创建GitHub Pages</h1><p><strong>1. GitHub账号</strong><br>首先你要有一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>账号，已有的可以跳过这一步，没有可以去官网注册即可，注册时的<code>username</code>可能会影响你网站的域名，为什么是可能，如果你购买了其他域名就另当别论了，这篇文章不包含其他域名绑定，请看后续更新。</p>
+<p><strong>2. 创建Pages</strong><br>登陆账号后选择<code>New repository</code>新建仓库，<strong><code>Repository name</code>填写username.github.io</strong>，这里的<code>username</code>一定要与注册时的一直，才能成功开启<code>GitHub Pages</code>，通过这个网址直接访问你的博客，不然会产生一系列繁琐的步骤，其他选项可以不用动，点击<code>Create repository</code>，这一步就完成了。</p>
+<p><img src="http://p3giebs33.bkt.clouddn.com/%E5%9B%BE1.jpg" alt="新建仓库"><br><img src="http://p3giebs33.bkt.clouddn.com/%E5%9B%BE2.jpg" alt="填写正确的仓库名称"></p>
+<h1 id="0x02-安装程序"><a href="#0x02-安装程序" class="headerlink" title="0x02 安装程序"></a>0x02 安装程序</h1><p>Windows下的安装较为简单，大家可以直接点击下面的的链接下载安装：</p>
+<ul>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Nodejs</a></li>
+</ul>
+<p>安装完成后右键找到<code>Git Bash</code>,输入命令<code>sudo npm install hexo-cli -g</code>即可安装。</p>
+<h1 id="0x03-添加SSH密钥"><a href="#0x03-添加SSH密钥" class="headerlink" title="0x03 添加SSH密钥"></a>0x03 添加SSH密钥</h1><h2 id="生成SSH-Key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h2><p>打开<code>Git Bash</code>如果第一次使用<code>git</code>，直接生成新的<code>ssh key</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"你的邮件地址@youremail.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure>
+<p>随后输入密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure>
+<p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容，成功生成后如下图所示：<br><img src="http://p3giebs33.bkt.clouddn.com/%E5%9B%BE3.jpg" alt=""></p>
+<h2 id="添加SSH-Key到Github"><a href="#添加SSH-Key到Github" class="headerlink" title="添加SSH Key到Github"></a>添加SSH Key到Github</h2><ul>
+<li>打开本地 id_rsa.pub 文件（ 参考地址 C:\Documents and Settings\Administrator.ssh\id_rsa.pub）。此文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</li>
+<li>登陆 GitHub 系统。点击右上角的 <code>Account Settings---&gt;SSH Public keys ---&gt; add another public keys</code></li>
+</ul>
+<p>复制文件内容到Key文本框中，点击<code>add key</code>就可以了。</p>
+<h2 id="测试添加是否成功"><a href="#测试添加是否成功" class="headerlink" title="测试添加是否成功"></a>测试添加是否成功</h2><p>输入命令查看是否能连接至你的账户：<br><code>bash $ ssh -T git@GitHub.com</code><br>不出意外的话应该可以成功连接:<br><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<h2 id="进行最后的设置"><a href="#进行最后的设置" class="headerlink" title="进行最后的设置"></a>进行最后的设置</h2><p>现在你已经可以通过 SSH 链接到 GitHub 了，还有一些个人信息需要完善的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"真实姓名"</span></span><br><span class="line">$ git config --global user.email  <span class="string">"你的邮箱"</span></span><br></pre></td></tr></table></figure>
+<h1 id="0x04-编写发布博客"><a href="#0x04-编写发布博客" class="headerlink" title="0x04 编写发布博客"></a>0x04 编写发布博客</h1><p>接下来使用Hexo初始化一个博客，并且教你如何发布新文章。<br>使用下列命令初始化自己的博客：<br><code>bash $ hexo init username.github.io</code></p>
+<p><strong>个性化主题</strong><br>可以看下<a href="https://hexo.io/themes/" target="_blank" rel="noopener">这里</a>，选择自己喜欢的主题下载安装即可，教程在主题介绍页这里不做介绍了。</p>
+<p><strong>基本配置</strong><br>打开文件位置<code>username.github.io/_config.yml</code>修改几个键值对，下面把几个必须设置的列出来按需求修改，记得保存，还有注意配置的键值之间一定要有空格。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: dimsky 的 9 维空间 //你博客的名字</span><br><span class="line">author: dimsky //你的名字</span><br><span class="line">language: zh-Hans //语言 中文</span><br><span class="line">theme: next //刚刚安装的主题名称</span><br><span class="line">deploy:</span><br><span class="line">type: git //使用Git 发布</span><br><span class="line">repo: https://github.com/username/username.github.io.git // 刚创建的Github仓库</span><br></pre></td></tr></table></figure></p>
+<p>更多设置移步<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">这里</a>。</p>
+<p><strong>写文章</strong><br>这里需要用到<code>Markdown</code>编辑器，如何使用请参阅我的上一篇<a href="https://lisenlinsirb.github.io/2018/01/31/18.1.31-The%20First/" target="_blank" rel="noopener">Markdown教程</a>，编辑完成后保存在<code>username.github.io/source/_posts</code>即可，通过命令<code>hexo s</code>可以配置本地预览。</p>
+<p><strong>发布</strong><br>安装hexo-deployer-git自动部署工具：<br><code>bash $ npm install hexo-deployer-git --save</code><br>完成后运行<br><code>bash $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code><br>等待上传完成就可以了。</p>
+<h1 id="0x07-图床"><a href="#0x07-图床" class="headerlink" title="0x07 图床"></a>0x07 图床</h1><p>图床的作用主要用于保存博客中大量的图片，并且提供外链地址，这里我使用的是<a href="https://www.qiniu.com/?hmsr=biaoti&amp;hmpl=pinzhuan&amp;hmcu=biaoti&amp;hmkw=&amp;hmci=" target="_blank" rel="noopener">七牛</a>，注册并且实名认证后可以得到10G的免费空间。</p>
+<p><strong>其他方式</strong><br>也可以直接将图片保存到<code>blog/source</code>目录中，文中使用路径<code>/floder/picname.jpg</code>添加即可，但大量图片可能空间不够用。</p>
+<h1 id="0x06-终结"><a href="#0x06-终结" class="headerlink" title="0x06 终结"></a>0x06 终结</h1><p>现在你的Blog应该可以通过<code>http://yourusername.github.io</code>进行访问了。后面涉及域名注册与绑定这里并没有提及，会在后续进行更新。</p>
+<p><strong>相关链接</strong></p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/4eaddcbe4d12" target="_blank" rel="noopener">5分钟 搭建免费个人博客</a><br><a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+</blockquote>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">以前の記事</span>
+                <h2 class="post-list__post-title post-title"><a href="/2018/01/31/18.1.31-The First/" title="MarkdownPad编辑器基础教程">MarkdownPad编辑器基础教程</a></h2>
+                <p class="excerpt">
+                
+                
+Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考简书之Markdown的小白教程，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。
+
+0x00 标题Markdown中书写标题只要在文字前加上#，#的个数越多，标题字号越
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2018-01-31T02:09:59.495Z" class="post-list__meta--date date">2018-01-31</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2018/01/31/18.1.31-The First/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        &copy; 2018 LI Senlin - 本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+       
+    </span>
+    <span class="footer__copyright">
+             - 基于 <a href="http://hexo.io">Hexo</a> 搭建，原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+         </span>
+       
+    
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
