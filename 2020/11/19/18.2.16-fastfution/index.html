@@ -1,37 +1,396 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="GitHub项目地址：fastfusion，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。 项目依赖：OpenCVQtDoxygenBoostEigenGLUT、GLEWlibQGLViewer  安装依赖项Opencv安装见上一篇博文 Qt点击这里进入下载界面下载所需版本的Qt，这里我下载的是4.7.0sudo apt-get install g++-multilib li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TUM_fastfusion">
+<meta property="og:url" content="http://yoursite.com/2020/11/19/18.2.16-fastfution/index.html">
+<meta property="og:site_name" content="Ecke-Lee">
+<meta property="og:description" content="GitHub项目地址：fastfusion，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。 项目依赖：OpenCVQtDoxygenBoostEigenGLUT、GLEWlibQGLViewer  安装依赖项Opencv安装见上一篇博文 Qt点击这里进入下载界面下载所需版本的Qt，这里我下载的是4.7.0sudo apt-get install g++-multilib li">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-11-19T21:52:54.105Z">
+<meta property="article:modified_time" content="2020-11-19T22:23:55.018Z">
+<meta property="article:author" content="LI Senlin">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/11/19/18.2.16-fastfution/">
 
 
-{% block content %}
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <title>TUM_fastfusion | Ecke-Lee</title>
+  
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ecke-Lee</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">稳扎、稳打</p>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.2.16-fastfution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ecke-Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          TUM_fastfusion
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建于：2020-11-19 22:52:54 / 更新于：23:23:55" itemprop="dateCreated datePublished" datetime="2020-11-19T22:52:54+01:00">2020-11-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>GitHub项目地址：<a target="_blank" rel="noopener" href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
+<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
+</blockquote>
+<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
+<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a target="_blank" rel="noopener" href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
+
+<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
+<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
+<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
+<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
+<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/19/18.2.15-ubuntu_opencv/" rel="prev" title="Ubuntu16.04源码安装OpenCV2.4.13">
+      <i class="fa fa-chevron-left"></i> Ubuntu16.04源码安装OpenCV2.4.13
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/19/18.3.4-opencv-vs2015/" rel="next" title="Win10下VS2015配置编译OpenCV3.2.0_contrib x64">
+      Win10下VS2015配置编译OpenCV3.2.0_contrib x64 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9"><span class="nav-number">1.</span> <span class="nav-text">安装依赖项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Qt"><span class="nav-number">1.1.</span> <span class="nav-text">Qt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doxygen"><span class="nav-number">1.2.</span> <span class="nav-text">Doxygen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boost"><span class="nav-number">1.3.</span> <span class="nav-text">Boost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eigen"><span class="nav-number">1.4.</span> <span class="nav-text">Eigen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GLUT%E3%80%81GLEW"><span class="nav-number">1.5.</span> <span class="nav-text">GLUT、GLEW</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#libQGLViewer"><span class="nav-number">1.6.</span> <span class="nav-text">libQGLViewer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text">错误解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV"><span class="nav-number">2.1.</span> <span class="nav-text">找不到OpenCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#libQGLViewer%E5%87%BA%E9%94%99"><span class="nav-number">2.2.</span> <span class="nav-text">libQGLViewer出错</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">博主</p>
+  <div class="site-description" itemprop="description">自动化、计算机、CV、Linux相关</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">博主</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
