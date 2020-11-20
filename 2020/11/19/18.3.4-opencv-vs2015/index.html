@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"lisenlinsirb.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="在Opencv3.0后续版本中，一些高级特征提取、立体视觉以及机器学习的相关库都集成在opencv_contrib包里面，使用之前需要额外编译配置。需要的工具：点击这里下载OpenCV3.2.0Win版本安装包点击这里下载opencv_contrib-3.2.0.zip注意不带rc！CMake、 Visual Studio 2015  准备将下载的opencv_contrib-3.2.0.zip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Win10下VS2015配置编译OpenCV3.2.0_contrib x64">
-<meta property="og:url" content="http://yoursite.com/2020/11/19/18.3.4-opencv-vs2015/index.html">
+<meta property="og:url" content="https://lisenlinsirb.github.io/2020/11/19/18.3.4-opencv-vs2015/index.html">
 <meta property="og:site_name" content="Ecke-Lee">
 <meta property="og:description" content="在Opencv3.0后续版本中，一些高级特征提取、立体视觉以及机器学习的相关库都集成在opencv_contrib包里面，使用之前需要额外编译配置。需要的工具：点击这里下载OpenCV3.2.0Win版本安装包点击这里下载opencv_contrib-3.2.0.zip注意不带rc！CMake、 Visual Studio 2015  准备将下载的opencv_contrib-3.2.0.zip">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/20/cmake.png">
 <meta property="og:image" content="http://wildwald.synology.me:1234//images/2020/11/20/vs2015.png">
 <meta property="og:image" content="http://wildwald.synology.me:1234//images/2020/11/20/vs2015600532c188f310ae.png">
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://wildwald.synology.me:1234/images/2020/11/20/cmake.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/11/19/18.3.4-opencv-vs2015/">
+<link rel="canonical" href="https://lisenlinsirb.github.io/2020/11/19/18.3.4-opencv-vs2015/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -90,7 +90,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -117,15 +117,35 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
 
   </li>
   </ul>
@@ -155,12 +175,12 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.3.4-opencv-vs2015/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.3.4-opencv-vs2015/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -175,18 +195,18 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建于：2020-11-19 23:57:51" itemprop="dateCreated datePublished" datetime="2020-11-19T23:57:51+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 23:57:51" itemprop="dateCreated datePublished" datetime="2020-11-19T23:57:51+01:00">2020-11-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="更新于：2020-11-20 00:03:27" itemprop="dateModified" datetime="2020-11-20T00:03:27+01:00">2020-11-20</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-20 00:03:27" itemprop="dateModified" datetime="2020-11-20T00:03:27+01:00">2020-11-20</time>
               </span>
 
           
@@ -248,7 +268,10 @@
     <a href="/2020/11/19/18.2.16-fastfution/" rel="prev" title="TUM_fastfusion">
       <i class="fa fa-chevron-left"></i> TUM_fastfusion
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/20/20.11.20-build%20your%20blog%202/" rel="next" title="使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置">
+      使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -313,7 +336,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">博主</p>
+  <p class="site-author-name" itemprop="name">LI Senlin</p>
   <div class="site-description" itemprop="description">自动化、计算机、CV、Linux相关</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -321,7 +344,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -351,12 +374,10 @@
   &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">博主</span>
+  <span class="author" itemprop="copyrightHolder">LI Senlin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
         
 
@@ -381,7 +402,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -409,5 +430,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 </html>

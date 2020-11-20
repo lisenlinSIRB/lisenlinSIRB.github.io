@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>MarkdownPad编辑器基础教程</title>
+    <url>/2020/11/19/18.1.31-The%20First/</url>
+    <content><![CDATA[<blockquote>
+<p>Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考<a href="https://www.jianshu.com/p/7e6078acee6d">简书之Markdown的小白教程</a>，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。</p>
+</blockquote>
+<h1 id="0x00-标题"><a href="#0x00-标题" class="headerlink" title="0x00 标题"></a>0x00 标题</h1><p>Markdown中书写标题只要在文字前加上<code>#</code>，<code>#</code>的个数越多，标题字号越小，一共有六级标题，如下：</p>
+<pre>
+# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+</pre>
+
+<p>效果：</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h1 id="0x01-列表"><a href="#0x01-列表" class="headerlink" title="0x01 列表"></a>0x01 列表</h1><p>列表可以分为有序和无序列表，其实只是前面项目符号不同罢了，干脆归纳到一起。<br>在前面加上<code>-</code>即可,也可以加上数字，具体效果自己操作下吧。</p>
+<pre>
+- 文字
+- 文字
+- 文字
+... ...
+1. 文字
+2. 文字
+3. 文字
+... ...
+</pre> 
+
+<p>效果：（有编号）</p>
+<ol>
+<li>文字</li>
+<li>文字</li>
+<li>文字</li>
+</ol>
+<h1 id="0x02-插入链接或图片"><a href="#0x02-插入链接或图片" class="headerlink" title="0x02 插入链接或图片"></a>0x02 插入链接或图片</h1><p>插入链接：打个比方，我要在这里加入我博客的链接，可以这样写<code>[Ecke_Lee](lisenlinsirb.github.io)</code>。<br>像这样<a href="lisenlinsirb.github.io">Ecke_Lee</a>。</p>
+<p>插入图片：<code>![图片下方显示的图片名(不需要文字可不写)](图片链接地址)</code>，也可以直接将本地图片拖放至插入位置，这里不做眼石</p>
+<h1 id="0x03-引用"><a href="#0x03-引用" class="headerlink" title="0x03 引用"></a>0x03 引用</h1><p>引用更简单只需要<code>&gt; 引用内容</code>就可以了。</p>
+<h1 id="0x04-调整字体"><a href="#0x04-调整字体" class="headerlink" title="0x04 调整字体"></a>0x04 调整字体</h1><pre>
+加粗内容：**内容**
+斜体内容：*内容*
+</pre>
+
+<h1 id="0x05-代码的引用"><a href="#0x05-代码的引用" class="headerlink" title="0x05 代码的引用"></a>0x05 代码的引用</h1><p>好了，正题来了，作为一名程序员，引用代码再常见不过，Markdown中代码饮用方式如下：</p>
+<pre>
+
+`单行代码`
+
+三个`
+多行代码
+三个`
+
+</pre>
+
+<p>这个引用字符在<code>esc</code>下面那个按键，不是单引号!</p>
+<p>但在使用过程中发现多行代码在电脑上似乎不能正常换行，不知上传后会不会好，可以使用如下解决方法：</p>
+<p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样换行字符就不会被转义，就可以啦。</p>
+<h1 id="0x06-表格"><a href="#0x06-表格" class="headerlink" title="0x06 表格"></a>0x06 表格</h1><p>对我来说不常用，但还是说下吧</p>
+<pre>
+ Name | Data | other
+ :---: | ---: | ---
+ Lee | 22/1 | other
+</pre>
+
+<p>重点要说的是上面第二行<code>：</code>，<code>:</code>位置指定了该列的对齐方式，左边为左对齐，右边为右对齐，两边都有则中间对齐，不加默认左对齐。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用GitHub Pages和Hexo快速建立私人Blog（1）</title>
+    <url>/2020/11/19/18.2.1-build%20your%20blog/</url>
+    <content><![CDATA[<blockquote>
+<p>本文主要介绍如何使用GitHub Pages和Hexo建立一个私人专属的Blog，在这里，你可以自定义网页主题风格，板块分类等等。这里我尽量写的简明易懂，面向初学者。</p>
+</blockquote>
+<h1 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h1><h2 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h2><p>至于为什么选择GitHub，其一是免费，其二就不用多说了，这是发展趋势。</p>
+<p><a href="https://pages.github.com/">GitHub Pages</a>原本用于介绍托管在GitHub上的项目，不过，由于他的空间免费稳定，用来搭建一个博客再好不过了。</p>
+<blockquote>
+<p>GitHub Pages可以被认为是用户编写的、托管在Github上的静态网页。</p>
+</blockquote>
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p><a href="https://hexo.io/">Hexo</a>,引用官网的介绍<code>A fast, simple &amp; powerful blog framework</code>，翻译过来即<code>一个快速、简单、功能强大的博客框架</code>，相比于JekyII，真的很简单（看了教程一大堆的环境就没欲望继续配置了），这也是为什么这里使用<code>Hexo</code>搭建的原因，当然也有可能有其他更好的。</p>
+<h1 id="0x01-创建GitHub-Pages"><a href="#0x01-创建GitHub-Pages" class="headerlink" title="0x01 创建GitHub Pages"></a>0x01 创建GitHub Pages</h1><p><strong>1. GitHub账号</strong><br>首先你要有一个<a href="https://github.com/">GitHub</a>账号，已有的可以跳过这一步，没有可以去官网注册即可，注册时的<code>username</code>可能会影响你网站的域名，为什么是可能，如果你购买了其他域名就另当别论了，这篇文章不包含其他域名绑定，请看后续更新。</p>
+<p><strong>2. 创建Pages</strong><br>登陆账号后选择<code>New repository</code>新建仓库，**<code>Repository name</code>填写username.github.io**，这里的<code>username</code>一定要与注册时的一直，才能成功开启<code>GitHub Pages</code>，通过这个网址直接访问你的博客，不然会产生一系列繁琐的步骤，其他选项可以不用动，点击<code>Create repository</code>，这一步就完成了。</p>
+<p><img src="http://wildwald.synology.me:1234/images/2020/11/19/1.jpg" alt="新建仓库"><br><img src="http://wildwald.synology.me:1234/images/2020/11/19/2.jpg" alt="填写正确的仓库名称"></p>
+<h1 id="0x02-安装程序"><a href="#0x02-安装程序" class="headerlink" title="0x02 安装程序"></a>0x02 安装程序</h1><p>Windows下的安装较为简单，大家可以直接点击下面的的链接下载安装：</p>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://nodejs.org/en/">Nodejs</a></li>
+</ul>
+<p>安装完成后右键找到<code>Git Bash</code>,输入命令<code>sudo npm install hexo-cli -g</code>即可安装。</p>
+<h1 id="0x03-添加SSH密钥"><a href="#0x03-添加SSH密钥" class="headerlink" title="0x03 添加SSH密钥"></a>0x03 添加SSH密钥</h1><h2 id="生成SSH-Key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h2><p>打开<code>Git Bash</code>如果第一次使用<code>git</code>，直接生成新的<code>ssh key</code>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的邮件地址@youremail.com&quot;</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure>
+
+<p>随后输入密码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure>
+<p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容，成功生成后如下图所示：<br><img src="http://wildwald.synology.me:1234/images/2020/11/19/3.jpg"></p>
+<h2 id="添加SSH-Key到Github"><a href="#添加SSH-Key到Github" class="headerlink" title="添加SSH Key到Github"></a>添加SSH Key到Github</h2><ul>
+<li>打开本地 id_rsa.pub 文件（ 参考地址 C:\Documents and Settings\Administrator.ssh\id_rsa.pub）。此文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</li>
+<li>登陆 GitHub 系统。点击右上角的 <code>Account Settings---&gt;SSH Public keys ---&gt; add another public keys</code></li>
+</ul>
+<p>复制文件内容到Key文本框中，点击<code>add key</code>就可以了。</p>
+<h2 id="测试添加是否成功"><a href="#测试添加是否成功" class="headerlink" title="测试添加是否成功"></a>测试添加是否成功</h2><p>输入命令查看是否能连接至你的账户：<br><code>bash $ ssh -T git@GitHub.com</code><br>不出意外的话应该可以成功连接:<br><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<h2 id="进行最后的设置"><a href="#进行最后的设置" class="headerlink" title="进行最后的设置"></a>进行最后的设置</h2><p>现在你已经可以通过 SSH 链接到 GitHub 了，还有一些个人信息需要完善的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;真实姓名&quot;</span></span><br><span class="line">$ git config --global user.email  <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="0x04-编写发布博客"><a href="#0x04-编写发布博客" class="headerlink" title="0x04 编写发布博客"></a>0x04 编写发布博客</h1><p>接下来使用Hexo初始化一个博客，并且教你如何发布新文章。<br>使用下列命令初始化自己的博客：<br><code>bash $ hexo init username.github.io</code></p>
+<p><strong>个性化主题</strong><br>可以看下<a href="https://hexo.io/themes/">这里</a>，选择自己喜欢的主题下载安装即可，教程在主题介绍页这里不做介绍了。</p>
+<p><strong>基本配置</strong><br>打开文件位置<code>username.github.io/_config.yml</code>修改几个键值对，下面把几个必须设置的列出来按需求修改，记得保存，还有注意配置的键值之间一定要有空格。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title:  &#x2F;&#x2F;你博客的名字</span><br><span class="line">author:  &#x2F;&#x2F;你的名字</span><br><span class="line">language: zh-Hans &#x2F;&#x2F;语言 中文</span><br><span class="line">theme: next &#x2F;&#x2F;刚刚安装的主题名称</span><br><span class="line">deploy:</span><br><span class="line">type: git &#x2F;&#x2F;使用Git 发布</span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git &#x2F;&#x2F; 刚创建的Github仓库</span><br></pre></td></tr></table></figure>
+<p>更多设置移步<a href="https://hexo.io/zh-cn/docs/configuration.html">这里</a>。</p>
+<p><strong>写文章</strong><br>这里需要用到<code>Markdown</code>编辑器，如何使用请参阅我的上一篇<a href="https://lisenlinsirb.github.io/2018/01/31/18.1.31-The%20First/">Markdown教程</a>，编辑完成后保存在<code>username.github.io/source/_posts</code>即可，通过命令<code>hexo s</code>可以配置本地预览。</p>
+<p><strong>发布</strong><br>安装hexo-deployer-git自动部署工具：<br><code>bash $ npm install hexo-deployer-git --save</code><br>完成后运行<br><code>bash $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code><br>等待上传完成就可以了。</p>
+<h1 id="0x07-图床"><a href="#0x07-图床" class="headerlink" title="0x07 图床"></a>0x07 图床</h1><p>图床的作用主要用于保存博客中大量的图片，并且提供外链地址，这里我使用的是<a href="https://www.qiniu.com/?hmsr=biaoti&hmpl=pinzhuan&hmcu=biaoti&hmkw=&hmci=">七牛</a>，注册并且实名认证后可以得到10G的免费空间。</p>
+<p><strong>其他方式</strong><br>也可以直接将图片保存到<code>blog/source</code>目录中，文中使用路径<code>/floder/picname.jpg</code>添加即可，但大量图片可能空间不够用。</p>
+<h1 id="0x06-终结"><a href="#0x06-终结" class="headerlink" title="0x06 终结"></a>0x06 终结</h1><p>现在你的Blog应该可以通过<code>http://yourusername.github.io</code>进行访问了。后面涉及域名注册与绑定这里并没有提及，会在后续进行更新。</p>
+<p><strong>相关链接</strong></p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/4eaddcbe4d12">5分钟 搭建免费个人博客</a><br><a href="https://www.jianshu.com/p/05289a4bc8b2">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Ubuntu16.04源码安装OpenCV2.4.13</title>
+    <url>/2020/11/19/18.2.15-ubuntu_opencv/</url>
+    <content><![CDATA[<h2 id="0x00-准备"><a href="#0x00-准备" class="headerlink" title="0x00 准备"></a>0x00 准备</h2><h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h3><p>输入<code>cmake \--version</code>查看是否已安装CMake，若有版本信息请跳过这一步</p>
+<p>点击<a href="https://cmake.org/download/">这里</a>下载CMake最新版<br>下载后解压，进入安装目录执行：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ./bootstrap</span><br><span class="line">$ sudo make -jn(n并行线程数，根据CPU决定)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+
+<p>输入<code>cmake \--version</code>查看版本是否正确</p>
+<h3 id="安装编译工具"><a href="#安装编译工具" class="headerlink" title="安装编译工具"></a><a href="#%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7" title="安装编译工具"></a>安装编译工具</h3><p><code>sudo apt-get install build-essential</code></p>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%8C%85" title="安装依赖包"></a>安装依赖包</h3><p><code>sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</code></p>
+<h3 id="安装可选包"><a href="#安装可选包" class="headerlink" title="安装可选包"></a><a href="#%E5%AE%89%E8%A3%85%E5%8F%AF%E9%80%89%E5%8C%85" title="安装可选包"></a>安装可选包</h3><p><code>sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></p>
+<h2 id="0x01-编译OpenCV"><a href="#0x01-编译OpenCV" class="headerlink" title="0x01 编译OpenCV"></a><a href="#0x01-%E7%BC%96%E8%AF%91OpenCV" title="0x01 编译OpenCV"></a>0x01 编译OpenCV</h2><h3 id="下载OpenCV"><a href="#下载OpenCV" class="headerlink" title="下载OpenCV"></a><a href="#%E4%B8%8B%E8%BD%BDOpenCV" title="下载OpenCV"></a>下载OpenCV</h3><p>点击<a href="https://github.com/Itseez/opencv/archive/2.4.13.zip">这里</a>下载OpenCV2.4.13。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a><a href="#%E7%BC%96%E8%AF%91" title="编译"></a>编译</h3><p>解压后执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> opencv-2.4.13</span><br><span class="line">$ mkdir build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> ..</span><br><span class="line">$ sudo make -j8</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<h2 id="0x03环境配置"><a href="#0x03环境配置" class="headerlink" title="0x03环境配置"></a><a href="#0x03%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" title="0x03环境配置"></a>0x03环境配置</h2><p><code>sudo gedit /etc/ld.so.conf.d/opencv.conf</code><br>末尾加入<code>/usr/local/lib</code>，保存退出<br><code>sudo ldconfig</code> 使配置生效</p>
+<p><code>sudo gedit /etc/bash.bashrc</code><br>末尾加入  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PKG_CONFIG_PATH=<span class="variable">$PKG_CONFIG_PATH</span>:/usr/<span class="built_in">local</span>/lib/pkgconfig</span><br><span class="line"><span class="built_in">export</span> PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
+
+<p>切换<code>root</code>用户执行<code>source /etc/bash.bashrc</code><br><code>Ctrl+d</code>退出<code>root</code>用户<br><code>sudo updatedb</code></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Ubuntu16.04基础设置及常用软件安装</title>
+    <url>/2020/11/19/18.2.12-ubuntu/</url>
+    <content><![CDATA[<blockquote>
+<p>常用软件：</p>
+<ol>
+<li> 网易云音乐</li>
+<li> inode校园网认证客户端（&gt;ubuntu15.04）</li>
+<li> shadowsocks</li>
+<li> 文本编辑器notepadqq、guake终端</li>
+<li> htop用于查看系统资源占用</li>
+<li> wps office</li>
+<li> QQ</li>
+<li> Psensor监控硬件温度及风扇转速</li>
+</ol>
+</blockquote>
+<h2 id="卸载自带应用"><a href="#卸载自带应用" class="headerlink" title="卸载自带应用"></a>卸载自带应用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove thunderbird（邮箱）</span><br><span class="line">$ sudo apt-get remove  totem （视频播放器）</span><br><span class="line">$ sudo apt-get remove rhythmbox（音乐播放器）</span><br><span class="line">$ sudo apt-get remove empathy </span><br><span class="line">$ sudo apt-get remove brasero</span><br><span class="line">$ sudo apt-get remove simple-scan</span><br><span class="line">$ sudo apt-get remove gnome-mahjongg </span><br><span class="line">$ sudo apt-get remove aisleriot </span><br><span class="line">$ sudo apt-get remove gnome-mines </span><br><span class="line">$ sudo apt-get remove transmission-common </span><br><span class="line">$ sudo apt-get remove gnome-orca </span><br><span class="line">$ sudo apt-get remove webbrowser-app </span><br><span class="line">$ sudo apt-get remove gnome-sudoku</span><br><span class="line">$ sudo apt-get remove unity-webapps-common</span><br><span class="line">$ sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置阿里源"><a href="#设置阿里源" class="headerlink" title="设置阿里源"></a>设置阿里源</h2><p>设置-&gt;软件和更新-&gt;使用阿里云镜像-&gt;其他软件-&gt;Canonical合作伙伴打钩</p>
+<h2 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="解决双系统时间冲突"><a href="#解决双系统时间冲突" class="headerlink" title="解决双系统时间冲突"></a>解决双系统时间冲突</h2><p>ubuntu下终端输入： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ timedatectl set-local-rtc 1 --adjust-system-clock</span><br><span class="line">$ timedatectl set-ntp 0</span><br></pre></td></tr></table></figure>
+
+<p>在windows下对时即可</p>
+<h2 id="Grub更改默认启动项"><a href="#Grub更改默认启动项" class="headerlink" title="Grub更改默认启动项"></a>Grub更改默认启动项</h2><p>默认情况下Grub会将Linux作为第一启动项，更改默认启动项执行下列命令：<br><code>sudo gedit /etc/default/grub</code><br>将<code>GRUB_DEFAULT=0</code>改为<code>GRUB_DEFAULT=windows引导顺序</code><br>更新Grub：<code>sudo update-grub</code></p>
+<h2 id="更改Grub背景"><a href="#更改Grub背景" class="headerlink" title="更改Grub背景"></a>更改Grub背景</h2><ul>
+<li>将图片放入<code>/boot/grub</code>目录</li>
+<li>更新Grub：<code>sudo update-grub</code></li>
+</ul>
+<h2 id="1-网易云音乐"><a href="#1-网易云音乐" class="headerlink" title="1.网易云音乐"></a>1.网易云音乐</h2><p>下载相对应的Linux deb安装包。<br>下载路径中打开终端，执行下列命令安装：</p>
+<p><code>sudo dpkg \-i packagename.deb</code></p>
+<h2 id="2-shadowsocks"><a href="#2-shadowsocks" class="headerlink" title="2.shadowsocks"></a>2.shadowsocks</h2><p>执行下列命令安装Shadowsocks-qt5：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-文本编辑器notepadqq、guake终端"><a href="#3-文本编辑器notepadqq、guake终端" class="headerlink" title="3.文本编辑器notepadqq、guake终端"></a>3.文本编辑器notepadqq、guake终端</h2><p>输入下列命令添加ppa软件源并安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepadqq：</span><br><span class="line">$ sudo add-apt-repository ppa:notepadqq-team/notepadqq</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install notepadqq</span><br><span class="line"></span><br><span class="line">guake：</span><br><span class="line">$ sudo add-apt-repository ppa:webupd8team/unstable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-htop查看系统资源占用"><a href="#4-htop查看系统资源占用" class="headerlink" title="4.htop查看系统资源占用"></a>4.htop查看系统资源占用</h2><p><code>sudo apt-get install htop</code></p>
+<h2 id="5-wps-office"><a href="#5-wps-office" class="headerlink" title="5.wps office"></a>5.wps office</h2><p>这里(<a href="http://community.wps.cn/download/)%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85%EF%BC%9A">http://community.wps.cn/download/)下载安装包，执行下列命令安装：</a><br><code>sudo dpkg \-i packagename.deb</code><br>打开应用如果提示字体缺失，下载字体wps_symbol_fonts，创建目录：<br><code>sudo mkdir /usr/share/fonts/wps-office</code><br>将下载的字体复制到创建的目录：<br><code>sudo cp \-r fonts_name.zip /usr/share/fonts/wps-office</code><br>进入到创建的目录解压字体包：<br><code>sudo unzip fonts_name.zip</code><br>解压后将压缩包删除：<br><code>sudo rm \-r fonts_name.zip</code></p>
+<h2 id="6-qq"><a href="#6-qq" class="headerlink" title="6.qq"></a>6.qq</h2><p>首先安装wine：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:wine/wine-builds</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install winehq-devel</span><br></pre></td></tr></table></figure>
+
+<p>下载wineqq，执行命令安装至根目录下：<br><code>tar xvf wineQQ8.9_19990.tar.xz \-C ~/</code></p>
+<h2 id="7-Psensor监控硬件温度及风扇转速"><a href="#7-Psensor监控硬件温度及风扇转速" class="headerlink" title="7.Psensor监控硬件温度及风扇转速"></a>7.Psensor监控硬件温度及风扇转速</h2><p>首先安装下面两个工具：<br><code>sudo apt-get install lm-sensors hddtemp</code><br>检测传感器：<br><code>sudo sensors-detect</code><br>安装Psensor：<br><code>sudo apt-get install psensor</code><br>运行程序可以进行监控状态、开机启动等设置</p>
+<p><strong>参考网址：</strong><br><a href="http://blog.csdn.net/Bleachswh/article/details/51295861?locationNum=9">Ubuntu 16.04 安装 Notepadqq</a><br><a href="http://blog.csdn.net/u011557212/article/details/53234134">Ubuntu 16.04 安装网易云音乐</a><br><a href="http://blog.csdn.net/lj402159806/article/details/54695651">Ubuntu 16.04 安装后续要做的事</a><br><a href="http://blog.csdn.net/u012260238/article/details/52716592">安装完ubuntu系统后的优化</a><br><a href="https://www.cnblogs.com/jerrybaby/p/6677013.html">ubuntu ：安装一个方便的终端工具，Guake Terminal</a><br><a href="http://blog.csdn.net/tmosk/article/details/78015680">ubuntu16.04下安装新版QQ</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>TUM_fastfusion</title>
+    <url>/2020/11/19/18.2.16-fastfution/</url>
+    <content><![CDATA[<blockquote>
+<p>GitHub项目地址：<a href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
+<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
+</blockquote>
+<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
+<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
+
+<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
+<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
+<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
+<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
+<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Win10下VS2015配置编译OpenCV3.2.0_contrib x64</title>
+    <url>/2020/11/19/18.3.4-opencv-vs2015/</url>
+    <content><![CDATA[<blockquote>
+<p>在Opencv3.0后续版本中，一些高级特征提取、立体视觉以及机器学习的相关库都集成在opencv_contrib包里面，使用之前需要额外编译配置。<br>需要的工具：<br>点击<a href="https://opencv.org/opencv-3-2.html">这里</a>下载<code>OpenCV3.2.0Win版本</code>安装包<br>点击<a href="https://github.com/opencv/opencv_contrib/releases">这里</a>下载<code>opencv_contrib-3.2.0.zip</code>注意不带<code>rc</code>！<br>CMake、 Visual Studio 2015</p>
+</blockquote>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>将下载的<code>opencv_contrib-3.2.0.zip</code>解压后放到<code>OpenCV</code>安装目录，我这里是<code>C:\library\opencv</code>，在此目录下建立文件夹<code>mybuild</code>存放编译文件。</p>
+<h3 id="开始编译"><a href="#开始编译" class="headerlink" title="开始编译"></a>开始编译</h3><p>打开<code>CMake</code>，参照下图填写路径后点击<code>Configure</code>进行配置<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/cmake.png" alt="CMake"><br>弹出窗口选择VS2015 X64点击<code>Finish</code><br><img src="http://wildwald.synology.me:1234//images/2020/11/20/vs2015.png" alt="VS2015 x64"><br>进行如下配置：(这里供参考)</p>
+<ol>
+<li><p> <code>OPENCV_EXTRA_MODULES_PATH</code>填写<code>C:\library\opencv\opencv_contrib-3.2.0\opencv_contrib-3.2.0\modules</code></p>
+</li>
+<li><p> 去掉<code>WITH_CUDA</code></p>
+</li>
+<li><p> <code>CMAKE_INSTALL_PREFIX</code>填写<code>C:/library/opencv/build</code></p>
+</li>
+</ol>
+<p>点击<code>Generate</code>生成后打开<code>mybuild</code>文件夹下<code>OpenCV.sln</code>文件，编译生成<code>ALL_BUILD</code>和<code>INSTALL</code>项目即可。</p>
+<blockquote>
+<p>配置过程中出现无法下载<code>ippicv_windows_20151201.zip</code>，手动下载后放到<code>sources\3rdparty\ippicv\downloads\windows-04e81ce5d0e329c3fbc606ae32cad44d</code>目录下重新进行<code>Configure</code>即可</p>
+</blockquote>
+<h3 id="VS2015开发环境配置"><a href="#VS2015开发环境配置" class="headerlink" title="VS2015开发环境配置"></a><a href="#VS2015%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" title="VS2015开发环境配置"></a>VS2015开发环境配置</h3><h4 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a><a href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE" title="环境变量配置"></a>环境变量配置</h4><p><code>Path</code>环境变量添加<code>C:\library\opencv\build\x64\vc14\bin</code></p>
+<h4 id="添加包含目录、库目录"><a href="#添加包含目录、库目录" class="headerlink" title="添加包含目录、库目录"></a><a href="#%E6%B7%BB%E5%8A%A0%E5%8C%85%E5%90%AB%E7%9B%AE%E5%BD%95%E3%80%81%E5%BA%93%E7%9B%AE%E5%BD%95" title="添加包含目录、库目录"></a>添加包含目录、库目录</h4><p>新建VS2015工程，视图-&gt;其他窗口打开属性管理器，如下图所示进行配置：<br><img src="http://wildwald.synology.me:1234//images/2020/11/20/vs2015600532c188f310ae.png"></p>
+<p>在属性管理器中配置x64属性，<code>VC++目录</code>中<code>包含目录</code>添加如下信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\library\opencv\build\include</span><br><span class="line">C:\library\opencv\build\include\opencv</span><br><span class="line">C:\library\opencv\build\include\opencv2</span><br></pre></td></tr></table></figure>
+
+<p><code>库目录</code>中添加<code>C:\library\opencv\build\x64\vc14\lib</code></p>
+<p><code>链接器-输入-附加依赖项</code>中添加：(Debug，如需Release版本请去掉d)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">opencv_aruco320d.lib</span><br><span class="line">opencv_bgsegm320d.lib</span><br><span class="line">opencv_bioinspired320d.lib</span><br><span class="line">opencv_calib3d320d.lib</span><br><span class="line">opencv_ccalib320d.lib</span><br><span class="line">opencv_core320d.lib</span><br><span class="line">opencv_datasets320d.lib</span><br><span class="line">opencv_dpm320d.lib</span><br><span class="line">opencv_face320d.lib</span><br><span class="line">opencv_features2d320d.lib</span><br><span class="line">opencv_flann320d.lib</span><br><span class="line">opencv_fuzzy320d.lib</span><br><span class="line">opencv_imgcodecs320d.lib</span><br><span class="line">opencv_imgproc320d.lib</span><br><span class="line">opencv_highgui320d.lib</span><br><span class="line">opencv_line_descriptor320d.lib</span><br><span class="line">opencv_ml320d.lib</span><br><span class="line">opencv_objdetect320d.lib</span><br><span class="line">opencv_optflow320d.lib</span><br><span class="line">opencv_phase_unwrapping320d.lib</span><br><span class="line">opencv_photo320d.lib</span><br><span class="line">opencv_plot320d.lib</span><br><span class="line">opencv_reg320d.lib</span><br><span class="line">opencv_rgbd320d.lib</span><br><span class="line">opencv_saliency320d.lib</span><br><span class="line">opencv_shape320d.lib</span><br><span class="line">opencv_stereo320d.lib</span><br><span class="line">opencv_stitching320d.lib</span><br><span class="line">opencv_structured_light320d.lib</span><br><span class="line">opencv_superres320d.lib</span><br><span class="line">opencv_surface_matching320d.lib</span><br><span class="line">opencv_text320d.lib</span><br><span class="line">opencv_tracking320d.lib</span><br><span class="line">opencv_video320d.lib</span><br><span class="line">opencv_videoio320d.lib</span><br><span class="line">opencv_videostab320d.lib</span><br><span class="line">opencv_xfeatures2d320d.lib</span><br><span class="line">opencv_ximgproc320d.lib</span><br><span class="line">opencv_xobjdetect320d.lib</span><br><span class="line">opencv_xphoto320d.lib</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>可以使用下列代码进行测试：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include opencv2/opencv.hpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define PI 3.1415926  </span></span><br><span class="line"><span class="comment">#define R 150  </span></span><br><span class="line">using namespace cv;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() </span><br><span class="line">&#123;</span><br><span class="line">    Point center = Point(250, 250);</span><br><span class="line">    int temp = 0;</span><br><span class="line">    <span class="keyword">while</span> (waitKey(60) != 27) </span><br><span class="line">    &#123;</span><br><span class="line">        temp++;</span><br><span class="line">        temp = temp % 72;</span><br><span class="line">        <span class="built_in">float</span> 角度 = temp / 18.0 * PI;</span><br><span class="line">        Mat picture(500, 500, CV_8UC3, Scalar(255, 255, 255));</span><br><span class="line">        //  center = Point(palm[0] + 320, palm[2] + 240);  </span><br><span class="line">        //  r = palm[1] / 2;  </span><br><span class="line">        center.x = 250 + R*sin(角度);</span><br><span class="line">        center.y = 250 - R*cos(角度);</span><br><span class="line">        int r = 20;</span><br><span class="line">        circle(picture, center, r, Scalar(255, 0, 0), -1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt; 7; i++) </span><br><span class="line">        &#123;</span><br><span class="line">            角度 = (temp - 3 * i) / 18.0 * PI;</span><br><span class="line">            r = 20 - i * 2;</span><br><span class="line">            center.x = 250 + R*sin(角度);</span><br><span class="line">            center.y = 250 - R*cos(角度);</span><br><span class="line">            circle(picture, center, r, Scalar(255, 0, 0\), -1);</span><br><span class="line">        &#125;</span><br><span class="line">        string 内容 = <span class="string">&quot;Loading...&quot;</span>;</span><br><span class="line">        switch ((temp % 36) / 12) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> 0:内容 = <span class="string">&quot;Opencv3&quot;</span>; <span class="built_in">break</span>;</span><br><span class="line">            <span class="keyword">case</span> 1:内容 = <span class="string">&quot;Opencv3.&quot;</span>; <span class="built_in">break</span>;</span><br><span class="line">            <span class="keyword">case</span> 2:内容 = <span class="string">&quot;Opencv3.2.0&quot;</span>; <span class="built_in">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cv::putText(picture, 内容, cv::Point(180, 250), 3, 1, cvScalar(0, 0, 255));</span><br><span class="line"></span><br><span class="line">        imshow(<span class="string">&quot;Loading...&quot;</span>, picture);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>运行截图如下：<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/testopencv.png" alt="截图"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</title>
+    <url>/2020/11/20/20.11.20-build%20your%20blog%202/</url>
+    <content><![CDATA[<blockquote>
+<p>主要以Next主题为例，讲解如何在Hexo框架中选取主题并进行设置</p>
+</blockquote>
+<h1 id="Next主题的安装"><a href="#Next主题的安装" class="headerlink" title="Next主题的安装"></a>Next主题的安装</h1><p>在Hexo中安装新的主题，需要将下载的主题放至themes文件夹下，随后对两个<code>_config.yml</code>文件进行修改，一个是博客主目录下的<code>站点配置文件</code>，用于选择主题，另一个在主题目录下<code>主题配置文件</code>，主要进行主题的一些个性化设置。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/hexo/_config.yml</span><br><span class="line">/hexo/themes/theme_name/_config.yml</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-下载Next主题："><a href="#1-下载Next主题：" class="headerlink" title="1.下载Next主题："></a>1.下载Next主题：</h2><p><code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code></p>
+<h2 id="2-修改站点配置文件-hexo-config-yml："><a href="#2-修改站点配置文件-hexo-config-yml：" class="headerlink" title="2.修改站点配置文件/hexo/_config.yml："></a>2.修改站点配置文件<code>/hexo/_config.yml</code>：</h2><h3 id="2-1-语言主题选择"><a href="#2-1-语言主题选择" class="headerlink" title="2.1 语言主题选择"></a>2.1 语言主题选择</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br><span class="line">author:</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p>将theme改为next,language后面输入zh-CN</p>
+<h3 id="2-2添加装饰动图"><a href="#2-2添加装饰动图" class="headerlink" title="2.2添加装饰动图"></a>2.2添加装饰动图</h3><p>git输入如下代码<code>npm install -save hexo-helper-live2d</code><br>站点配置文件添加代码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-&lt;你喜欢的模型名字&gt;</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>可选择的模型名字可以自行搜索，这里以<code>tororo</code>为例<br>1.在站点目录下建立文件夹<code>live2d_models</code><br>2.<code>live2d_models</code>文件夹中建立<code>tororo</code>文件夹<br>3.<code>tororo</code>文件夹中建立文件<code>tororo.model.json</code><br>git执行命令安装<br><code>npm install --save live2d-widget-model-tororo</code><br>这样设置后动图就会出现在网页右下角</p>
+<h2 id="3-修改主题配置文件-themes-next-config-yml："><a href="#3-修改主题配置文件-themes-next-config-yml：" class="headerlink" title="3.修改主题配置文件/themes/next/_config.yml："></a>3.修改主题配置文件<code>/themes/next/_config.yml</code>：</h2><h3 id="3-1设置标签分类"><a href="#3-1设置标签分类" class="headerlink" title="3.1设置标签分类"></a>3.1设置标签分类</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<p>这里将需要添加的标签页取消注释即可，我添加了about，categories，tags，commonweal标签<br>效果如图所示：<br><img src="" alt="标签分类"></p>
+<h3 id="3-2设置主题样式"><a href="#3-2设置主题样式" class="headerlink" title="3.2设置主题样式"></a>3.2设置主题样式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini </span></span><br><span class="line">选择你喜欢的一种样式，去掉前面的 <span class="comment">#，其他主题前加上 # 即可。</span></span><br></pre></td></tr></table></figure>
+<p>Pisces样式示例图片如下<br><img src="" alt="Pisces"></p>
+<h3 id="3-3显示文章当前浏览进度"><a href="#3-3显示文章当前浏览进度" class="headerlink" title="3.3显示文章当前浏览进度"></a>3.3显示文章当前浏览进度</h3><p>搜索关键字<code>scrollpercent</code>，将<code>false</code>改为<code>true</code></p>
+<h3 id="3-4设置网站图标"><a href="#3-4设置网站图标" class="headerlink" title="3.4设置网站图标"></a>3.4设置网站图标</h3><p>将一张32x32的ico图标放在<code>themes/next/source/images</code>里，修改配置文件如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon.ico</span><br><span class="line">  medium: /images/favicon.ico</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5-开启多国语言支持"><a href="#3-5-开启多国语言支持" class="headerlink" title="3.5 开启多国语言支持"></a>3.5 开启多国语言支持</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">language_switcher: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h2><h3 id="4-1-隐藏底部Powered-By-Hexo显示"><a href="#4-1-隐藏底部Powered-By-Hexo显示" class="headerlink" title="4.1 隐藏底部Powered By Hexo显示"></a>4.1 隐藏底部<code>Powered By Hexo</code>显示</h3><p><img src="" alt="PBH"><br>博客在网页的最底端会显示上图中文字，去除这行文字我们可以打开<code>\themes\next\layout\_partials\footer.swig</code>文件，删除如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;%- <span class="keyword">if</span> theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=<span class="string">&quot;powered-by&quot;</span>&gt;</span><br><span class="line">    &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- <span class="keyword">if</span> theme.scheme !== <span class="string">&#x27;Gemini&#x27;</span> %&#125;</span><br><span class="line">      &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://&#x27;</span> + theme.scheme | lower + <span class="string">&#x27;.theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(<span class="string">&#x27;footer.powered&#x27;</span>, next_url(<span class="string">&#x27;https://hexo.io&#x27;</span>, <span class="string">&#x27;Hexo&#x27;</span>, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;) + <span class="string">&#x27; &amp; &#x27;</span> + next_url(next_site, <span class="string">&#x27;NexT.&#x27;</span> + theme.scheme, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;)) &#125;&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-开启多国语言支持"><a href="#4-2-开启多国语言支持" class="headerlink" title="4.2 开启多国语言支持"></a>4.2 开启多国语言支持</h3><p>其他更多的设置请参考<code>主题配置文件</code></p>
+]]></content>
+  </entry>
+</search>

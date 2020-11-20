@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"lisenlinsirb.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="自动化、计算机、CV、Linux相关">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ecke-Lee">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://lisenlinsirb.github.io/index.html">
 <meta property="og:site_name" content="Ecke-Lee">
 <meta property="og:description" content="自动化、计算机、CV、Linux相关">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="LI Senlin">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="https://lisenlinsirb.github.io/">
 
 
 <script id="page-configurations">
@@ -39,7 +39,7 @@
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -83,7 +83,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -110,15 +110,35 @@
 
 
 <nav class="site-nav">
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
 
   </li>
   </ul>
@@ -147,12 +167,97 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.3.4-opencv-vs2015/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/20/20.11.20-build%20your%20blog%202/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
+      <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ecke-Lee">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/20/20.11.20-build%20your%20blog%202/" class="post-title-link" itemprop="url">使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-20 21:20:21 / 修改时间：21:25:56" itemprop="dateCreated datePublished" datetime="2020-11-20T21:20:21+01:00">2020-11-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>主要以Next主题为例，讲解如何在Hexo框架中选取主题并进行设置</p>
+</blockquote>
+<h1 id="Next主题的安装"><a href="#Next主题的安装" class="headerlink" title="Next主题的安装"></a>Next主题的安装</h1><p>在Hexo中安装新的主题，需要将下载的主题放至themes文件夹下，随后对两个<code>_config.yml</code>文件进行修改，一个是博客主目录下的<code>站点配置文件</code>，用于选择主题，另一个在主题目录下<code>主题配置文件</code>，主要进行主题的一些个性化设置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/hexo/_config.yml</span><br><span class="line">/hexo/themes/theme_name/_config.yml</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-下载Next主题："><a href="#1-下载Next主题：" class="headerlink" title="1.下载Next主题："></a>1.下载Next主题：</h2><p><code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code></p>
+<h2 id="2-修改站点配置文件-hexo-config-yml："><a href="#2-修改站点配置文件-hexo-config-yml：" class="headerlink" title="2.修改站点配置文件/hexo/_config.yml："></a>2.修改站点配置文件<code>/hexo/_config.yml</code>：</h2><h3 id="2-1-语言主题选择"><a href="#2-1-语言主题选择" class="headerlink" title="2.1 语言主题选择"></a>2.1 语言主题选择</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br><span class="line">author:</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p>将theme改为next,language后面输入zh-CN</p>
+<h3 id="2-2添加装饰动图"><a href="#2-2添加装饰动图" class="headerlink" title="2.2添加装饰动图"></a>2.2添加装饰动图</h3><p>git输入如下代码<code>npm install -save hexo-helper-live2d</code><br>站点配置文件添加代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-&lt;你喜欢的模型名字&gt;</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>可选择的模型名字可以自行搜索，这里以<code>tororo</code>为例<br>1.在站点目录下建立文件夹<code>live2d_models</code><br>2.<code>live2d_models</code>文件夹中建立<code>tororo</code>文件夹<br>3.<code>tororo</code>文件夹中建立文件<code>tororo.model.json</code><br>git执行命令安装<br><code>npm install --save live2d-widget-model-tororo</code><br>这样设置后动图就会出现在网页右下角</p>
+<h2 id="3-修改主题配置文件-themes-next-config-yml："><a href="#3-修改主题配置文件-themes-next-config-yml：" class="headerlink" title="3.修改主题配置文件/themes/next/_config.yml："></a>3.修改主题配置文件<code>/themes/next/_config.yml</code>：</h2><h3 id="3-1设置标签分类"><a href="#3-1设置标签分类" class="headerlink" title="3.1设置标签分类"></a>3.1设置标签分类</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<p>这里将需要添加的标签页取消注释即可，我添加了about，categories，tags，commonweal标签<br>效果如图所示：<br><img src="" alt="标签分类"></p>
+<h3 id="3-2设置主题样式"><a href="#3-2设置主题样式" class="headerlink" title="3.2设置主题样式"></a>3.2设置主题样式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini </span></span><br><span class="line">选择你喜欢的一种样式，去掉前面的 <span class="comment">#，其他主题前加上 # 即可。</span></span><br></pre></td></tr></table></figure>
+<p>Pisces样式示例图片如下<br><img src="" alt="Pisces"></p>
+<h3 id="3-3显示文章当前浏览进度"><a href="#3-3显示文章当前浏览进度" class="headerlink" title="3.3显示文章当前浏览进度"></a>3.3显示文章当前浏览进度</h3><p>搜索关键字<code>scrollpercent</code>，将<code>false</code>改为<code>true</code></p>
+<h3 id="3-4设置网站图标"><a href="#3-4设置网站图标" class="headerlink" title="3.4设置网站图标"></a>3.4设置网站图标</h3><p>将一张32x32的ico图标放在<code>themes/next/source/images</code>里，修改配置文件如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon.ico</span><br><span class="line">  medium: /images/favicon.ico</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5-开启多国语言支持"><a href="#3-5-开启多国语言支持" class="headerlink" title="3.5 开启多国语言支持"></a>3.5 开启多国语言支持</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language_switcher: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h2><h3 id="4-1-隐藏底部Powered-By-Hexo显示"><a href="#4-1-隐藏底部Powered-By-Hexo显示" class="headerlink" title="4.1 隐藏底部Powered By Hexo显示"></a>4.1 隐藏底部<code>Powered By Hexo</code>显示</h3><p><img src="" alt="PBH"><br>博客在网页的最底端会显示上图中文字，去除这行文字我们可以打开<code>\themes\next\layout\_partials\footer.swig</code>文件，删除如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;%- <span class="keyword">if</span> theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=<span class="string">&quot;powered-by&quot;</span>&gt;</span><br><span class="line">    &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- <span class="keyword">if</span> theme.scheme !== <span class="string">&#x27;Gemini&#x27;</span> %&#125;</span><br><span class="line">      &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://&#x27;</span> + theme.scheme | lower + <span class="string">&#x27;.theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(<span class="string">&#x27;footer.powered&#x27;</span>, next_url(<span class="string">&#x27;https://hexo.io&#x27;</span>, <span class="string">&#x27;Hexo&#x27;</span>, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;) + <span class="string">&#x27; &amp; &#x27;</span> + next_url(next_site, <span class="string">&#x27;NexT.&#x27;</span> + theme.scheme, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;)) &#125;&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-开启多国语言支持"><a href="#4-2-开启多国语言支持" class="headerlink" title="4.2 开启多国语言支持"></a>4.2 开启多国语言支持</h3><p>其他更多的设置请参考<code>主题配置文件</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.3.4-opencv-vs2015/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -168,18 +273,18 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建于：2020-11-19 23:57:51" itemprop="dateCreated datePublished" datetime="2020-11-19T23:57:51+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 23:57:51" itemprop="dateCreated datePublished" datetime="2020-11-19T23:57:51+01:00">2020-11-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="更新于：2020-11-20 00:03:27" itemprop="dateModified" datetime="2020-11-20T00:03:27+01:00">2020-11-20</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-20 00:03:27" itemprop="dateModified" datetime="2020-11-20T00:03:27+01:00">2020-11-20</time>
               </span>
 
           
@@ -241,12 +346,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.2.16-fastfution/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.2.16-fastfution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -262,12 +367,12 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于：2020-11-19 22:52:54 / 更新于：23:23:55" itemprop="dateCreated datePublished" datetime="2020-11-19T22:52:54+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 22:52:54 / 修改时间：23:23:55" itemprop="dateCreated datePublished" datetime="2020-11-19T22:52:54+01:00">2020-11-19</time>
             </span>
 
           
@@ -320,12 +425,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.2.15-ubuntu_opencv/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.2.15-ubuntu_opencv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -341,12 +446,12 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于：2020-11-19 22:40:23 / 更新于：22:45:22" itemprop="dateCreated datePublished" datetime="2020-11-19T22:40:23+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 22:40:23 / 修改时间：22:45:22" itemprop="dateCreated datePublished" datetime="2020-11-19T22:40:23+01:00">2020-11-19</time>
             </span>
 
           
@@ -396,12 +501,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.2.12-ubuntu/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.2.12-ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -417,12 +522,12 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于：2020-11-19 22:25:18 / 更新于：22:37:47" itemprop="dateCreated datePublished" datetime="2020-11-19T22:25:18+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 22:25:18 / 修改时间：22:37:47" itemprop="dateCreated datePublished" datetime="2020-11-19T22:25:18+01:00">2020-11-19</time>
             </span>
 
           
@@ -497,12 +602,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.2.1-build%20your%20blog/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.2.1-build%20your%20blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -518,12 +623,12 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于：2020-11-19 16:18:35 / 更新于：20:55:38" itemprop="dateCreated datePublished" datetime="2020-11-19T16:18:35+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 16:18:35 / 修改时间：20:55:38" itemprop="dateCreated datePublished" datetime="2020-11-19T16:18:35+01:00">2020-11-19</time>
             </span>
 
           
@@ -575,7 +680,7 @@
 <p><strong>基本配置</strong><br>打开文件位置<code>username.github.io/_config.yml</code>修改几个键值对，下面把几个必须设置的列出来按需求修改，记得保存，还有注意配置的键值之间一定要有空格。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title:  &#x2F;&#x2F;你博客的名字</span><br><span class="line">author:  &#x2F;&#x2F;你的名字</span><br><span class="line">language: zh-Hans &#x2F;&#x2F;语言 中文</span><br><span class="line">theme: next &#x2F;&#x2F;刚刚安装的主题名称</span><br><span class="line">deploy:</span><br><span class="line">type: git &#x2F;&#x2F;使用Git 发布</span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git &#x2F;&#x2F; 刚创建的Github仓库</span><br></pre></td></tr></table></figure>
 <p>更多设置移步<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration.html">这里</a>。</p>
-<p><strong>写文章</strong><br>这里需要用到<code>Markdown</code>编辑器，如何使用请参阅我的上一篇<a target="_blank" rel="noopener" href="https://lisenlinsirb.github.io/2018/01/31/18.1.31-The%20First/">Markdown教程</a>，编辑完成后保存在<code>username.github.io/source/_posts</code>即可，通过命令<code>hexo s</code>可以配置本地预览。</p>
+<p><strong>写文章</strong><br>这里需要用到<code>Markdown</code>编辑器，如何使用请参阅我的上一篇<a href="https://lisenlinsirb.github.io/2018/01/31/18.1.31-The%20First/">Markdown教程</a>，编辑完成后保存在<code>username.github.io/source/_posts</code>即可，通过命令<code>hexo s</code>可以配置本地预览。</p>
 <p><strong>发布</strong><br>安装hexo-deployer-git自动部署工具：<br><code>bash $ npm install hexo-deployer-git --save</code><br>完成后运行<br><code>bash $ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code><br>等待上传完成就可以了。</p>
 <h1 id="0x07-图床"><a href="#0x07-图床" class="headerlink" title="0x07 图床"></a>0x07 图床</h1><p>图床的作用主要用于保存博客中大量的图片，并且提供外链地址，这里我使用的是<a target="_blank" rel="noopener" href="https://www.qiniu.com/?hmsr=biaoti&hmpl=pinzhuan&hmcu=biaoti&hmkw=&hmci=">七牛</a>，注册并且实名认证后可以得到10G的免费空间。</p>
 <p><strong>其他方式</strong><br>也可以直接将图片保存到<code>blog/source</code>目录中，文中使用路径<code>/floder/picname.jpg</code>添加即可，但大量图片可能空间不够用。</p>
@@ -602,12 +707,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/19/18.1.31-The%20First/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.1.31-The%20First/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="博主">
+      <meta itemprop="name" content="LI Senlin">
       <meta itemprop="description" content="自动化、计算机、CV、Linux相关">
     </span>
 
@@ -623,18 +728,18 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建于：2020-11-19 16:18:35" itemprop="dateCreated datePublished" datetime="2020-11-19T16:18:35+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-19 16:18:35" itemprop="dateCreated datePublished" datetime="2020-11-19T16:18:35+01:00">2020-11-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="更新于：2018-01-31 05:22:49" itemprop="dateModified" datetime="2018-01-31T05:22:49+01:00">2018-01-31</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-01-31 05:22:49" itemprop="dateModified" datetime="2018-01-31T05:22:49+01:00">2018-01-31</time>
               </span>
 
           
@@ -783,7 +888,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">博主</p>
+  <p class="site-author-name" itemprop="name">LI Senlin</p>
   <div class="site-description" itemprop="description">自动化、计算机、CV、Linux相关</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -791,7 +896,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -821,12 +926,10 @@
   &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">博主</span>
+  <span class="author" itemprop="copyrightHolder">LI Senlin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
         
 
@@ -851,7 +954,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -879,5 +982,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 </html>
