@@ -261,7 +261,9 @@
   <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</title>
     <url>/2020/11/20/20.11.20-build%20your%20blog%202/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
+
+<blockquote>
 <p>主要以Next主题为例，讲解如何在Hexo框架中选取主题并进行设置</p>
 </blockquote>
 <h1 id="Next主题的安装"><a href="#Next主题的安装" class="headerlink" title="Next主题的安装"></a>Next主题的安装</h1><p>在Hexo中安装新的主题，需要将下载的主题放至themes文件夹下，随后对两个<code>_config.yml</code>文件进行修改，一个是博客主目录下的<code>站点配置文件</code>，用于选择主题，另一个在主题目录下<code>主题配置文件</code>，主要进行主题的一些个性化设置。</p>
