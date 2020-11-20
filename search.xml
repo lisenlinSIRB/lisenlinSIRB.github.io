@@ -191,32 +191,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>TUM_fastfusion</title>
-    <url>/2020/11/19/18.2.16-fastfution/</url>
-    <content><![CDATA[<blockquote>
-<p>GitHub项目地址：<a href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
-<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
-</blockquote>
-<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
-<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
-
-<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
-<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
-
-<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
-<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
-<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
-<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
-<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>Win10下VS2015配置编译OpenCV3.2.0_contrib x64</title>
     <url>/2020/11/19/18.3.4-opencv-vs2015/</url>
     <content><![CDATA[<blockquote>
@@ -250,6 +224,32 @@
 
 <p>运行截图如下：<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/testopencv.png" alt="截图"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>TUM_fastfusion</title>
+    <url>/2020/11/19/18.2.16-fastfution/</url>
+    <content><![CDATA[<blockquote>
+<p>GitHub项目地址：<a href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
+<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
+</blockquote>
+<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
+<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
+
+<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
+<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
+<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
+<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
+<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</title>
