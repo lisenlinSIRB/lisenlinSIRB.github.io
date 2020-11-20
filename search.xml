@@ -66,6 +66,13 @@
 
 <p>重点要说的是上面第二行<code>：</code>，<code>:</code>位置指定了该列的对齐方式，左边为左对齐，右边为右对齐，两边都有则中间对齐，不加默认左对齐。</p>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Markdown编辑器</tag>
+      </tags>
   </entry>
   <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（1）</title>
@@ -191,6 +198,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>TUM_fastfusion</title>
+    <url>/2020/11/19/18.2.16-fastfution/</url>
+    <content><![CDATA[<blockquote>
+<p>GitHub项目地址：<a href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
+<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
+</blockquote>
+<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
+<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+
+<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
+
+<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
+<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
+<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
+<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
+<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
     <title>Win10下VS2015配置编译OpenCV3.2.0_contrib x64</title>
     <url>/2020/11/19/18.3.4-opencv-vs2015/</url>
     <content><![CDATA[<blockquote>
@@ -226,32 +259,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>TUM_fastfusion</title>
-    <url>/2020/11/19/18.2.16-fastfution/</url>
-    <content><![CDATA[<blockquote>
-<p>GitHub项目地址：<a href="https://github.com/tum-vision/fastfusion">fastfusion</a>，四年前的项目了，正好用得到拿出来跑一下，记录下环境配置和问题解决。</p>
-<p>项目依赖：<br>OpenCV<br>Qt<br>Doxygen<br>Boost<br>Eigen<br>GLUT、GLEW<br>libQGLViewer</p>
-</blockquote>
-<h2 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9" title="安装依赖项"></a>安装依赖项</h2><p>Opencv安装见上一篇博文</p>
-<h3 id="Qt"><a href="#Qt" class="headerlink" title="Qt"></a>Qt</h3><p>点击<a href="http://download.qt.io/archive/qt/">这里</a>进入下载界面下载所需版本的Qt，这里我下载的是<code>4.7.0</code><br><code>sudo apt-get install g++-multilib libx11-dev libxext-dev libxtst-dev zlib1g-dev lib32ncurses5 lib32z1 libpng-dev autoconf automake libtool</code><br>依次执行下列命令：  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -xzvf qt-everywhere-opensource-src-4.7.0.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> qt-everywhere-opensource-src-4.7.0</span><br><span class="line">$ sudo ./configure 接受</span><br><span class="line">$ sudo make -j8(使用线程数，根据CPU配置)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo gedit /etc/profile</code>,末尾添加下列内容  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/usr/<span class="built_in">local</span>/Trolltech/Qt-4.7.0</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
-
-<p>输入<code>qmake \-v</code>如果版本输出正确则安装成功。</p>
-<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a href="#Doxygen" title="Doxygen"></a>Doxygen</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install graphviz</span><br><span class="line">$ apt-get install doxygen</span><br><span class="line">$ apt-get install doxygen-gui</span><br></pre></td></tr></table></figure>
-
-<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p><code>sudo apt-get install libboost1.58-all-dev</code></p>
-<h3 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h3><p><code>sudo apt-get install libeigen3-dev</code></p>
-<h3 id="GLUT、GLEW"><a href="#GLUT、GLEW" class="headerlink" title="GLUT、GLEW"></a>GLUT、GLEW</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GLUT:</span><br><span class="line">$ sudo apt-get install build-essential</span><br><span class="line">$ sudo apt-get install libgl1-mesa-dev</span><br><span class="line">$ sudo apt-get install libglu1-mesa-dev</span><br><span class="line">$ sudo apt-get install freeglut3-dev</span><br><span class="line">GLEW:</span><br><span class="line">$ apt-cache search glew</span><br><span class="line">安装列出的所有软件包</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
-<h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
-<h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</title>
     <url>/2020/11/20/20.11.20-build%20your%20blog%202/</url>
     <content><![CDATA[<blockquote>
@@ -266,21 +273,26 @@
 <h3 id="2-2添加装饰动图"><a href="#2-2添加装饰动图" class="headerlink" title="2.2添加装饰动图"></a>2.2添加装饰动图</h3><p>git输入如下代码<code>npm install -save hexo-helper-live2d</code><br>站点配置文件添加代码：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-&lt;你喜欢的模型名字&gt;</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>可选择的模型名字可以自行搜索，这里以<code>tororo</code>为例<br>1.在站点目录下建立文件夹<code>live2d_models</code><br>2.<code>live2d_models</code>文件夹中建立<code>tororo</code>文件夹<br>3.<code>tororo</code>文件夹中建立文件<code>tororo.model.json</code><br>git执行命令安装<br><code>npm install --save live2d-widget-model-tororo</code><br>这样设置后动图就会出现在网页右下角</p>
-<h2 id="3-修改主题配置文件-themes-next-config-yml："><a href="#3-修改主题配置文件-themes-next-config-yml：" class="headerlink" title="3.修改主题配置文件/themes/next/_config.yml："></a>3.修改主题配置文件<code>/themes/next/_config.yml</code>：</h2><h3 id="3-1设置标签分类"><a href="#3-1设置标签分类" class="headerlink" title="3.1设置标签分类"></a>3.1设置标签分类</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-修改主题配置文件-themes-next-config-yml："><a href="#3-修改主题配置文件-themes-next-config-yml：" class="headerlink" title="3.修改主题配置文件/themes/next/_config.yml："></a>3.修改主题配置文件<code>/themes/next/_config.yml</code>：</h2><h3 id="3-1设置标签分类"><a href="#3-1设置标签分类" class="headerlink" title="3.1设置标签分类"></a>3.1设置标签分类</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user关于</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags标签</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th分类</span></span><br><span class="line">  archives: /archives/ || fa fa-archive归档</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
 
-<p>这里将需要添加的标签页取消注释即可，我添加了about，categories，tags，commonweal标签<br>效果如图所示：<br><img src="" alt="标签分类"></p>
+<p>这里将需要添加的标签页取消注释即可，我添加了about，categories，tags，archives标签<br>在这里categories和tags需要额外进行下列设置，在git中执行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page categories</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>此命令在<code>source</code>文件夹中建立了<code>categories</code>和<code>tags</code>两个文件夹，分别修改两个文件夹中index.md为以下内容<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/fenlei.png" alt="categories/index.md"><br><img src="http://wildwald.synology.me:1234/images/2020/11/20/biaoqian.png" alt="tags/index.md"><br>经过上面设置就可以为文章增加标签和分类了，具体如何添加，请参考<a href="https://hexo.io/zh-cn/docs/front-matter.html#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE">这里</a></p>
 <h3 id="3-2设置主题样式"><a href="#3-2设置主题样式" class="headerlink" title="3.2设置主题样式"></a>3.2设置主题样式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini </span></span><br><span class="line">选择你喜欢的一种样式，去掉前面的 <span class="comment">#，其他主题前加上 # 即可。</span></span><br></pre></td></tr></table></figure>
-<p>Pisces样式示例图片如下<br><img src="" alt="Pisces"></p>
+<p>Pisces样式示例图片如下<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/pictheme.md.png" alt="Pisces"></p>
 <h3 id="3-3显示文章当前浏览进度"><a href="#3-3显示文章当前浏览进度" class="headerlink" title="3.3显示文章当前浏览进度"></a>3.3显示文章当前浏览进度</h3><p>搜索关键字<code>scrollpercent</code>，将<code>false</code>改为<code>true</code></p>
 <h3 id="3-4设置网站图标"><a href="#3-4设置网站图标" class="headerlink" title="3.4设置网站图标"></a>3.4设置网站图标</h3><p>将一张32x32的ico图标放在<code>themes/next/source/images</code>里，修改配置文件如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon.ico</span><br><span class="line">  medium: /images/favicon.ico</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-5-开启多国语言支持"><a href="#3-5-开启多国语言支持" class="headerlink" title="3.5 开启多国语言支持"></a>3.5 开启多国语言支持</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">language_switcher: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h2><h3 id="4-1-隐藏底部Powered-By-Hexo显示"><a href="#4-1-隐藏底部Powered-By-Hexo显示" class="headerlink" title="4.1 隐藏底部Powered By Hexo显示"></a>4.1 隐藏底部<code>Powered By Hexo</code>显示</h3><p><img src="" alt="PBH"><br>博客在网页的最底端会显示上图中文字，去除这行文字我们可以打开<code>\themes\next\layout\_partials\footer.swig</code>文件，删除如下内容：</p>
+<h3 id="3-6-开启代码块复制"><a href="#3-6-开启代码块复制" class="headerlink" title="3.6 开启代码块复制"></a>3.6 开启代码块复制</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">copy_button: </span><br><span class="line">	<span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">	show_result: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h2><h3 id="4-1-隐藏底部Powered-By-Hexo显示"><a href="#4-1-隐藏底部Powered-By-Hexo显示" class="headerlink" title="4.1 隐藏底部Powered By Hexo显示"></a>4.1 隐藏底部<code>Powered By Hexo</code>显示</h3><p><img src="http://wildwald.synology.me:1234/images/2020/11/20/PBH.png" alt="PBH"><br>博客在网页的最底端会显示上图中文字，去除这行文字我们可以打开<code>\themes\next\layout\_partials\footer.swig</code>文件，删除如下内容：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;%- <span class="keyword">if</span> theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=<span class="string">&quot;powered-by&quot;</span>&gt;</span><br><span class="line">    &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- <span class="keyword">if</span> theme.scheme !== <span class="string">&#x27;Gemini&#x27;</span> %&#125;</span><br><span class="line">      &#123;%- <span class="built_in">set</span> next_site = <span class="string">&#x27;https://&#x27;</span> + theme.scheme | lower + <span class="string">&#x27;.theme-next.org&#x27;</span> %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(<span class="string">&#x27;footer.powered&#x27;</span>, next_url(<span class="string">&#x27;https://hexo.io&#x27;</span>, <span class="string">&#x27;Hexo&#x27;</span>, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;) + <span class="string">&#x27; &amp; &#x27;</span> + next_url(next_site, <span class="string">&#x27;NexT.&#x27;</span> + theme.scheme, &#123;class: <span class="string">&#x27;theme-link&#x27;</span>&#125;)) &#125;&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-2-开启多国语言支持"><a href="#4-2-开启多国语言支持" class="headerlink" title="4.2 开启多国语言支持"></a>4.2 开启多国语言支持</h3><p>其他更多的设置请参考<code>主题配置文件</code></p>
+
+<p>其他更多的设置请参考<a href="https://theme-next.iissnan.com/theme-settings.html">主题配置</a></p>
 ]]></content>
   </entry>
 </search>
