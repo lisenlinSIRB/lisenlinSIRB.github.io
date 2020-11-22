@@ -20,21 +20,34 @@
     var CONFIG = {"hostname":"lisenlinsirb.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"P6K5G7W7RH","apiKey":"3e6a4ce5ccf6973312d5c0313715751c","indexName":"my_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考简书之Markdown的小白教程，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。  0x00 标题Markdown中书写标题只要在文字前加上#，#的个数越多，标题字号越小，一共有六级标题，如下：  # 这是一级标题 ## 这是二级标题 ### 这是三级标题 ####">
+  <meta name="description" content="图床主要用于存储图片，生成外链供其他人访问，可以为个人博客提供图片存储服务，对于像我一样使用github pages建站，存储容量有限，文章中经常添加一些图片的人来说是非常有用了，国内常用的服务提供商如七牛云，存储空间免费但是域名需要额外购买，想到手里正好有群晖的NAS，正好可以用chevereto实现图床功能，然后使用群晖的DDNS服务域名设置路由器端口转发完成外链访问，就可以愉快的在博客中插">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarkdownPad编辑器基础教程">
-<meta property="og:url" content="https://lisenlinsirb.github.io/2020/11/19/18.1.31-The%20First/index.html">
+<meta property="og:title" content="在群晖中使用Chevereto搭建图床">
+<meta property="og:url" content="https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/index.html">
 <meta property="og:site_name" content="Ecke-Lee">
-<meta property="og:description" content="Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考简书之Markdown的小白教程，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。  0x00 标题Markdown中书写标题只要在文字前加上#，#的个数越多，标题字号越小，一共有六级标题，如下：  # 这是一级标题 ## 这是二级标题 ### 这是三级标题 ####">
+<meta property="og:description" content="图床主要用于存储图片，生成外链供其他人访问，可以为个人博客提供图片存储服务，对于像我一样使用github pages建站，存储容量有限，文章中经常添加一些图片的人来说是非常有用了，国内常用的服务提供商如七牛云，存储空间免费但是域名需要额外购买，想到手里正好有群晖的NAS，正好可以用chevereto实现图床功能，然后使用群晖的DDNS服务域名设置路由器端口转发完成外链访问，就可以愉快的在博客中插">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-19T15:18:35.444Z">
-<meta property="article:modified_time" content="2020-11-20T20:58:30.791Z">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/webstation.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/mulu.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/quanxian.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/xuni.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/db.jpg">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/install1.jpg">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/install2.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/install3.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/wancheng.png">
+<meta property="og:image" content="http://wildwald.synology.me:1234/images/2020/11/22/ddns.png">
+<meta property="article:published_time" content="2020-11-20T23:01:41.047Z">
+<meta property="article:modified_time" content="2020-11-22T17:42:23.668Z">
 <meta property="article:author" content="LI Senlin">
 <meta property="article:tag" content="Blog">
-<meta property="article:tag" content="Markdown编辑器">
+<meta property="article:tag" content="群辉">
+<meta property="article:tag" content="图床">
+<meta property="article:tag" content="Chevereto">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wildwald.synology.me:1234/images/2020/11/22/webstation.png">
 
-<link rel="canonical" href="https://lisenlinsirb.github.io/2020/11/19/18.1.31-The%20First/">
+<link rel="canonical" href="https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/">
 
 
 <script id="page-configurations">
@@ -47,7 +60,7 @@
   };
 </script>
 
-  <title>MarkdownPad编辑器基础教程 | Ecke-Lee</title>
+  <title>在群晖中使用Chevereto搭建图床 | Ecke-Lee</title>
   
 
 
@@ -168,7 +181,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/19/18.1.31-The%20First/">
+    <link itemprop="mainEntityOfPage" href="https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,7 +194,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MarkdownPad编辑器基础教程
+          在群晖中使用Chevereto搭建图床
         </h1>
 
         <div class="post-meta">
@@ -191,14 +204,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-11-19 16:18:35" itemprop="dateCreated datePublished" datetime="2020-11-19T16:18:35+01:00">2020-11-19</time>
+              <time title="创建时间：2020-11-21 00:01:41" itemprop="dateCreated datePublished" datetime="2020-11-21T00:01:41+01:00">2020-11-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-20 21:58:30" itemprop="dateModified" datetime="2020-11-20T21:58:30+01:00">2020-11-20</time>
+                <time title="修改时间：2020-11-22 18:42:23" itemprop="dateModified" datetime="2020-11-22T18:42:23+01:00">2020-11-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,67 +235,27 @@
 
       
         <blockquote>
-<p>Markdown是一种标记语言，兼容HTML，但比HTML要更容易掌握，适合于网络书写，本篇主要参考<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7e6078acee6d">简书之Markdown的小白教程</a>，使用Markdownpad 2编辑器，写文章时可以实时生成预览结果，很方便。</p>
+<p>图床主要用于存储图片，生成外链供其他人访问，可以为个人博客提供图片存储服务，对于像我一样使用github pages建站，存储容量有限，文章中经常添加一些图片的人来说是非常有用了，国内常用的服务提供商如七牛云，存储空间免费但是域名需要额外购买，想到手里正好有群晖的NAS，正好可以用chevereto实现图床功能，然后使用群晖的DDNS服务域名设置路由器端口转发完成外链访问，就可以愉快的在博客中插入图片而不用担心github空间不够用了，网上有使用docker虚拟环境搭建的，我没有尝试，感兴趣可以搜索</p>
 </blockquote>
-<h1 id="0x00-标题"><a href="#0x00-标题" class="headerlink" title="0x00 标题"></a>0x00 标题</h1><p>Markdown中书写标题只要在文字前加上<code>#</code>，<code>#</code>的个数越多，标题字号越小，一共有六级标题，如下：</p>
-<pre>
-# 这是一级标题
-## 这是二级标题
-### 这是三级标题
-#### 这是四级标题
-##### 这是五级标题
-###### 这是六级标题
-</pre>
+<h1 id="安装下载相关软件"><a href="#安装下载相关软件" class="headerlink" title="安装下载相关软件"></a>安装下载相关软件</h1><p>进入群晖套件中心，安装以下必须套件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MariaDB 10</span><br><span class="line">PHP 7.0</span><br><span class="line">phpMyAdmin</span><br><span class="line">Web Station</span><br><span class="line">Apache HTTP Server 2.4</span><br></pre></td></tr></table></figure>
 
-<p>效果：</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h1 id="0x01-列表"><a href="#0x01-列表" class="headerlink" title="0x01 列表"></a>0x01 列表</h1><p>列表可以分为有序和无序列表，其实只是前面项目符号不同罢了，干脆归纳到一起。<br>在前面加上<code>-</code>即可,也可以加上数字，具体效果自己操作下吧。</p>
-<pre>
-- 文字
-- 文字
-- 文字
-... ...
-1. 文字
-2. 文字
-3. 文字
-... ...
-</pre> 
-
-<p>效果：（有编号）</p>
-<ol>
-<li>文字</li>
-<li>文字</li>
-<li>文字</li>
+<p>在Github下载<a target="_blank" rel="noopener" href="https://github.com/Chevereto/Chevereto-Free">Chevereto</a></p>
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><ol>
+<li>打开群晖的Web Station，点击PHP设置，双击选择安装PHP7.0，下方扩展名称要全部勾选，保存设置<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/webstation.png" alt="webstation"></li>
+<li>打开File Station，新建<code>chevereto</code>文件夹，将将下载的<code>Chevereto</code>放入文件夹内并解压缩，文件夹要给权限，右键属性选择权限然后新增用户组Everyone，并给与所有权限，应用到所有子文件就好了<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/mulu.png" alt="目录"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/quanxian.png" alt="权限"><br>打开群晖的Web Station设置虚拟主机，端口可以自定义，根目录选择上面解压缩后的文件夹，设置如图<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/xuni.png" alt="虚拟主机"></li>
+<li>在phpMyAdmin中新建数据库，名称自定义<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/db.jpg" alt="db"></li>
+<li>新建<code>settings.php</code>文件放到解压后的目录app文件夹下，打开群晖的网址加上端口号进行安装<br>例如：<code>192.168.1.2:1234</code><br>安装过程中参照下图进行设置<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install1.jpg" alt="步骤1"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install2.png" alt="步骤2"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install3.png" alt="步骤3"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/wancheng.png" alt="安装成功"></li>
 </ol>
-<h1 id="0x02-插入链接或图片"><a href="#0x02-插入链接或图片" class="headerlink" title="0x02 插入链接或图片"></a>0x02 插入链接或图片</h1><p>插入链接：打个比方，我要在这里加入我博客的链接，可以这样写<code>[Ecke_Lee](lisenlinsirb.github.io)</code>。<br>像这样<a href="lisenlinsirb.github.io">Ecke_Lee</a>。</p>
-<p>插入图片：<code>![图片下方显示的图片名(不需要文字可不写)](图片链接地址)</code>，也可以直接将本地图片拖放至插入位置，这里不做眼石</p>
-<h1 id="0x03-引用"><a href="#0x03-引用" class="headerlink" title="0x03 引用"></a>0x03 引用</h1><p>引用更简单只需要<code>&gt; 引用内容</code>就可以了。</p>
-<h1 id="0x04-调整字体"><a href="#0x04-调整字体" class="headerlink" title="0x04 调整字体"></a>0x04 调整字体</h1><pre>
-加粗内容：**内容**
-斜体内容：*内容*
-</pre>
-
-<h1 id="0x05-代码的引用"><a href="#0x05-代码的引用" class="headerlink" title="0x05 代码的引用"></a>0x05 代码的引用</h1><p>好了，正题来了，作为一名程序员，引用代码再常见不过，Markdown中代码饮用方式如下：</p>
-<pre>
-
-`单行代码`
-
-三个`
-多行代码
-三个`
-
-</pre>
-
-<p>这个引用字符在<code>esc</code>下面那个按键，不是单引号!</p>
-<p>但在使用过程中发现多行代码在电脑上似乎不能正常换行，不知上传后会不会好，可以使用如下解决方法：</p>
-<p><code>&lt;pre&gt;多行代码&lt;/pre&gt;</code>，这样换行字符就不会被转义，就可以啦。</p>
-<h1 id="0x06-表格"><a href="#0x06-表格" class="headerlink" title="0x06 表格"></a>0x06 表格</h1><p>对我来说不常用，但还是说下吧</p>
-<pre>
- Name | Data | other
- :---: | ---: | ---
- Lee | 22/1 | other
-</pre>
-
-<p>重点要说的是上面第二行<code>：</code>，<code>:</code>位置指定了该列的对齐方式，左边为左对齐，右边为右对齐，两边都有则中间对齐，不加默认左对齐。</p>
+<p>这样就完成了图床应用程序的安装</p>
+<h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><blockquote>
+<p>现在搭建好的图床中存储的图片只能在内网中做访问，如果要进行外部访问，需要设置DDNS域名解析服务或者设置DMZ主机，<strong>两者前提是有公网ip</strong>不过这样会将主机完全暴露在公网中，安全性不佳，这里使用群晖的DDNS服务进行搭建，方法只适用于白群辉，黑群晖大家可以在第一步中选择其他域名供应商。</p>
+</blockquote>
+<p>1.开启群辉DDNS服务</p>
+<p>打开控制面板-&gt;外部访问-&gt;DDNS-&gt;新增<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/ddns.png" alt="DDNS设置"><br>填写相关信息点击确定就可以了</p>
+<p>2.设置路由器的端口映射，将群晖Webstation中设置的端口映射到公网，不同路由器请自行搜索如何设置</p>
+<p>经过以上设置，通过DDNS域名就可以对图床进行访问了</p>
+<p>参考内容<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/a3gvxnon/">群晖搭建 chevereto 图床</a></p>
 
     </div>
 
@@ -293,7 +266,9 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Blog/" rel="tag"># Blog</a>
-              <a href="/tags/Markdown%E7%BC%96%E8%BE%91%E5%99%A8/" rel="tag"># Markdown编辑器</a>
+              <a href="/tags/%E7%BE%A4%E8%BE%89/" rel="tag"># 群辉</a>
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag"># 图床</a>
+              <a href="/tags/Chevereto/" rel="tag"># Chevereto</a>
           </div>
 
         
@@ -301,10 +276,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/11/19/18.2.1-build%20your%20blog/" rel="next" title="使用GitHub Pages和Hexo快速建立私人Blog（1）">
-      使用GitHub Pages和Hexo快速建立私人Blog（1） <i class="fa fa-chevron-right"></i>
+    <a href="/2020/11/20/20.11.20-build%20your%20blog%202/" rel="prev" title="使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置">
+      <i class="fa fa-chevron-left"></i> 使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/22/20.11.22-yolo_v4/" rel="next" title="yolo_v4实践（1）环境搭建">
+      yolo_v4实践（1）环境搭建 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -364,7 +342,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">0x00 标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">这是一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">这是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.1.</span> <span class="nav-text">这是三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">这是四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">这是五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-%E5%88%97%E8%A1%A8"><span class="nav-number">3.</span> <span class="nav-text">0x01 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-%E6%8F%92%E5%85%A5%E9%93%BE%E6%8E%A5%E6%88%96%E5%9B%BE%E7%89%87"><span class="nav-number">4.</span> <span class="nav-text">0x02 插入链接或图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-%E5%BC%95%E7%94%A8"><span class="nav-number">5.</span> <span class="nav-text">0x03 引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-%E8%B0%83%E6%95%B4%E5%AD%97%E4%BD%93"><span class="nav-number">6.</span> <span class="nav-text">0x04 调整字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x05-%E4%BB%A3%E7%A0%81%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">7.</span> <span class="nav-text">0x05 代码的引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x06-%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.</span> <span class="nav-text">0x06 表格</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">安装下载相关软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">使用教程</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

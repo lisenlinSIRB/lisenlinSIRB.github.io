@@ -125,6 +125,14 @@
 <p><a href="https://www.jianshu.com/p/4eaddcbe4d12">5分钟 搭建免费个人博客</a><br><a href="https://www.jianshu.com/p/05289a4bc8b2">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+        <tag>Github Pages</tag>
+      </tags>
   </entry>
   <entry>
     <title>Ubuntu16.04基础设置及常用软件安装</title>
@@ -173,6 +181,12 @@
 <h2 id="7-Psensor监控硬件温度及风扇转速"><a href="#7-Psensor监控硬件温度及风扇转速" class="headerlink" title="7.Psensor监控硬件温度及风扇转速"></a>7.Psensor监控硬件温度及风扇转速</h2><p>首先安装下面两个工具：<br><code>sudo apt-get install lm-sensors hddtemp</code><br>检测传感器：<br><code>sudo sensors-detect</code><br>安装Psensor：<br><code>sudo apt-get install psensor</code><br>运行程序可以进行监控状态、开机启动等设置</p>
 <p><strong>参考网址：</strong><br><a href="http://blog.csdn.net/Bleachswh/article/details/51295861?locationNum=9">Ubuntu 16.04 安装 Notepadqq</a><br><a href="http://blog.csdn.net/u011557212/article/details/53234134">Ubuntu 16.04 安装网易云音乐</a><br><a href="http://blog.csdn.net/lj402159806/article/details/54695651">Ubuntu 16.04 安装后续要做的事</a><br><a href="http://blog.csdn.net/u012260238/article/details/52716592">安装完ubuntu系统后的优化</a><br><a href="https://www.cnblogs.com/jerrybaby/p/6677013.html">ubuntu ：安装一个方便的终端工具，Guake Terminal</a><br><a href="http://blog.csdn.net/tmosk/article/details/78015680">ubuntu16.04下安装新版QQ</a></p>
 ]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>常用Linux软件安装</tag>
+      </tags>
   </entry>
   <entry>
     <title>Ubuntu16.04源码安装OpenCV2.4.13</title>
@@ -196,6 +210,14 @@
 
 <p>切换<code>root</code>用户执行<code>source /etc/bash.bashrc</code><br><code>Ctrl+d</code>退出<code>root</code>用户<br><code>sudo updatedb</code></p>
 ]]></content>
+      <categories>
+        <category>Open CV</category>
+      </categories>
+      <tags>
+        <tag>CMake</tag>
+        <tag>Open CV build</tag>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
   <entry>
     <title>TUM_fastfusion</title>
@@ -222,6 +244,14 @@
 <h3 id="libQGLViewer"><a href="#libQGLViewer" class="headerlink" title="libQGLViewer"></a><a href="#libQGLViewer" title="libQGLViewer"></a>libQGLViewer</h3><p><code>sudo apt-get install libqglviewer-qt4-dev</code></p>
 <h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a><a href="#%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3" title="错误解决"></a>错误解决</h2><h3 id="找不到OpenCV"><a href="#找不到OpenCV" class="headerlink" title="找不到OpenCV"></a><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0OpenCV" title="找不到OpenCV"></a>找不到OpenCV</h3><p><code>CMakeList.txt</code>中：<br><code>find_package(OpenCV REQUIRED)</code>改为<code>set(OpenCV_DIR /usr/local/opencv/release)</code></p>
 <h3 id="libQGLViewer出错"><a href="#libQGLViewer出错" class="headerlink" title="libQGLViewer出错"></a><a href="#libQGLViewer%E5%87%BA%E9%94%99" title="libQGLViewer出错"></a>libQGLViewer出错</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/src/onlinefusionviewer.cpp</span><br><span class="line">添加QGLViewer/manipulatedFrame.h</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Computer Vision</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>SLAM实时构图</tag>
+        <tag>单目深度估计</tag>
+      </tags>
   </entry>
   <entry>
     <title>Win10下VS2015配置编译OpenCV3.2.0_contrib x64</title>
@@ -257,13 +287,18 @@
 
 <p>运行截图如下：<br><img src="http://wildwald.synology.me:1234/images/2020/11/20/testopencv.png" alt="截图"></p>
 ]]></content>
+      <categories>
+        <category>Computer Vision</category>
+      </categories>
+      <tags>
+        <tag>Open CV build</tag>
+        <tag>Windows 10</tag>
+      </tags>
   </entry>
   <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（2）-Next主题设置</title>
     <url>/2020/11/20/20.11.20-build%20your%20blog%202/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
-
-<blockquote>
+    <content><![CDATA[<blockquote>
 <p>主要以Next主题为例，讲解如何在Hexo框架中选取主题并进行设置</p>
 </blockquote>
 <h1 id="Next主题的安装"><a href="#Next主题的安装" class="headerlink" title="Next主题的安装"></a>Next主题的安装</h1><p>在Hexo中安装新的主题，需要将下载的主题放至themes文件夹下，随后对两个<code>_config.yml</code>文件进行修改，一个是博客主目录下的<code>站点配置文件</code>，用于选择主题，另一个在主题目录下<code>主题配置文件</code>，主要进行主题的一些个性化设置。</p>
@@ -296,5 +331,87 @@
 
 <p>其他更多的设置请参考<a href="https://theme-next.iissnan.com/theme-settings.html">主题配置</a></p>
 ]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+        <tag>Github Pages</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在群晖中使用Chevereto搭建图床</title>
+    <url>/2020/11/21/20.11.21-chevereto_synology/</url>
+    <content><![CDATA[<blockquote>
+<p>图床主要用于存储图片，生成外链供其他人访问，可以为个人博客提供图片存储服务，对于像我一样使用github pages建站，存储容量有限，文章中经常添加一些图片的人来说是非常有用了，国内常用的服务提供商如七牛云，存储空间免费但是域名需要额外购买，想到手里正好有群晖的NAS，正好可以用chevereto实现图床功能，然后使用群晖的DDNS服务域名设置路由器端口转发完成外链访问，就可以愉快的在博客中插入图片而不用担心github空间不够用了，网上有使用docker虚拟环境搭建的，我没有尝试，感兴趣可以搜索</p>
+</blockquote>
+<h1 id="安装下载相关软件"><a href="#安装下载相关软件" class="headerlink" title="安装下载相关软件"></a>安装下载相关软件</h1><p>进入群晖套件中心，安装以下必须套件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MariaDB 10</span><br><span class="line">PHP 7.0</span><br><span class="line">phpMyAdmin</span><br><span class="line">Web Station</span><br><span class="line">Apache HTTP Server 2.4</span><br></pre></td></tr></table></figure>
+
+<p>在Github下载<a href="https://github.com/Chevereto/Chevereto-Free">Chevereto</a></p>
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><ol>
+<li>打开群晖的Web Station，点击PHP设置，双击选择安装PHP7.0，下方扩展名称要全部勾选，保存设置<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/webstation.png" alt="webstation"></li>
+<li>打开File Station，新建<code>chevereto</code>文件夹，将将下载的<code>Chevereto</code>放入文件夹内并解压缩，文件夹要给权限，右键属性选择权限然后新增用户组Everyone，并给与所有权限，应用到所有子文件就好了<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/mulu.png" alt="目录"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/quanxian.png" alt="权限"><br>打开群晖的Web Station设置虚拟主机，端口可以自定义，根目录选择上面解压缩后的文件夹，设置如图<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/xuni.png" alt="虚拟主机"></li>
+<li>在phpMyAdmin中新建数据库，名称自定义<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/db.jpg" alt="db"></li>
+<li>新建<code>settings.php</code>文件放到解压后的目录app文件夹下，打开群晖的网址加上端口号进行安装<br>例如：<code>192.168.1.2:1234</code><br>安装过程中参照下图进行设置<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install1.jpg" alt="步骤1"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install2.png" alt="步骤2"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/install3.png" alt="步骤3"><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/wancheng.png" alt="安装成功"></li>
+</ol>
+<p>这样就完成了图床应用程序的安装</p>
+<h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><blockquote>
+<p>现在搭建好的图床中存储的图片只能在内网中做访问，如果要进行外部访问，需要设置DDNS域名解析服务或者设置DMZ主机，<strong>两者前提是有公网ip</strong>不过这样会将主机完全暴露在公网中，安全性不佳，这里使用群晖的DDNS服务进行搭建，方法只适用于白群辉，黑群晖大家可以在第一步中选择其他域名供应商。</p>
+</blockquote>
+<p>1.开启群辉DDNS服务</p>
+<p>打开控制面板-&gt;外部访问-&gt;DDNS-&gt;新增<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/ddns.png" alt="DDNS设置"><br>填写相关信息点击确定就可以了</p>
+<p>2.设置路由器的端口映射，将群晖Webstation中设置的端口映射到公网，不同路由器请自行搜索如何设置</p>
+<p>经过以上设置，通过DDNS域名就可以对图床进行访问了</p>
+<p>参考内容<a href="https://post.smzdm.com/p/a3gvxnon/">群晖搭建 chevereto 图床</a></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>群辉</tag>
+        <tag>图床</tag>
+        <tag>Chevereto</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>yolo_v4实践（1）环境搭建</title>
+    <url>/2020/11/22/20.11.22-yolo_v4/</url>
+    <content><![CDATA[<blockquote>
+<p>yolo是一个实时物体检测的算法，实时性以及精度都很不错，最近正好有项目用到，在这里总结一下，这一片主要记录在WIN以及UBUNTU下环境的配置，下面大部分过程两个系统中很相似，不同的地方我会提到</p>
+</blockquote>
+<p>yolov4是目前比较新的一个版本，提升了检测性能以及可以在家用的GPU平台中进行训练，yolo官方的版本主要是在darknet框架下实现的，同时有很多大神把它写成了不同的版本，这里考虑到需要跨平台来使用，为了简化环境配置，使用<a href="https://github.com/Tianxiaomo/pytorch-YOLOv4">pytorch版本YOLOv4</a></p>
+<h1 id="1-安装-Anaconda"><a href="#1-安装-Anaconda" class="headerlink" title="1.安装 Anaconda"></a>1.安装 Anaconda</h1><p>首先我们需要安装<a href="">anaconda</a>，这是一个python的虚拟环境，当你需要配置不同的依赖环境又害怕相互冲突时这个就非常有用了，在WIN下安装过程很简单，记得添加到<code>PATH</code>路径就好，这里就不用赘述了，对于Linux，我的版本是Ubuntu16.04，下载对应版本<code>.sh</code>安装包后执行下列命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash ~/Downloads/Anaconda3-5.2.0-Linux-x86_64.sh</span><br><span class="line">bash ~/Downloads/Anaconda2-5.2.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+
+<p><em>这里第一个Anaconda3对应的是python3版本，Anaconda2则是python2版本，下载的时候要注意</em><br>输入命令后一路跟着提示完成就可以了，安装完成后命令行输入<code>conda</code>如果找不到还要添加到系统的环境，输入下面命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo gedit ~/.basrc</span><br><span class="line">在打开文件结尾处添加</span><br><span class="line"><span class="built_in">export</span> PATH=/home/aeasringnar/anaconda3/bin:<span class="variable">$PATH</span></span><br><span class="line">保存退出后运行</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>至此Anaconda就安装成功了</p>
+<h1 id="2-安装所需环境"><a href="#2-安装所需环境" class="headerlink" title="2.安装所需环境"></a>2.安装所需环境</h1><p>首先创建一个虚拟环境，名称为<code>pytorch</code>（可以自定义，后面一致就行）</p>
+<p><code>conda create --name torch python=3.6</code></p>
+<p>然后激活这个环境</p>
+<p><code>conda activate torch</code></p>
+<p>安装依赖项，如果安装CPU版本，建议模型的选择上选择tiny的模型，不然帧率会很低，安装命令如下：</p>
+<p><code>conda install pytorch torchvision cpuonly -c pytorch</code></p>
+<p>如果需要GPU版本，需要首先安装Nvidia驱动，先添加PPA源<br><code>$ sudo add-apt-repository ppa:graphics-drivers/ppa</code><br>更新软件列表<br><code>$ sudo apt-get update</code></p>
+<p>查看当前可安装的驱动版本<br><code>ubuntu-drivers devices</code><br><img src="http://wildwald.synology.me:1234/images/2020/11/22/liebiao.png" alt="驱动列表"><br>在列出的驱动版本中选择要安装的版本使用<code>pip</code>方式进行安装，例如这里我安装的是440版本，可以执行命令<br><code>sudo pip install nvidia-440</code><br>或者可以直接执行<code>udo ubuntu-drivers autoinstall</code>自动安装推荐的版本<br>安装完成后我们在命令行执行<br><code>$ nvidia-smi</code><br>正确安装会有如下输出<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/xinxi.png" alt="显卡信息"><br><em>注意这里的cuda版本下面安装<code>cudatoolkit</code>的时候要一致</em></p>
+<p>执行下列命令安装pytorch,注意这里的<code>cudatoolkit</code>版本和上面一致</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pytorch  conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch</span><br><span class="line">$ pip install opencv_python</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-运行摄像头的Demo实时检测"><a href="#3-运行摄像头的Demo实时检测" class="headerlink" title="3.运行摄像头的Demo实时检测"></a>3.运行摄像头的Demo实时检测</h1><p>从Github中下载<a href="https://github.com/Tianxiaomo/pytorch-YOLOv4">这个</a>项目，打开目录下的<code>tool</code>文件夹，将<code>camera.py</code>移到上一层目录，这里一个摄像头检测的Demo，有一处地方需要修改，在第68行，将<br><code>orig_im = plot_boxes_cv2(frame, boxes, class_names=class_names)</code><br>改为<br><code>orig_im = plot_boxes_cv2(frame, boxes[0], class_names=class_names)</code></p>
+<p>项目路径新建文件夹<code>weight</code>,下载yolo模型文件<a href="https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights">yolov4.weights</a>并放入，当然，配置文件路径在camera.py文件中也可以做修改自定义，在36行左右，如图所示<br><img src="http://wildwald.synology.me:1234/images/2020/11/22/lujing.png" alt="路径"><br>其中<code>coco.names</code>存储检测的对象名称，<code>.cfg</code>是检测网络的网络结构配置文件，<code>.weights</code>是权重文件，预训练的模型</p>
+<p>经过上面步骤后执行命令<code>python camera.py</code>就可以运行啦，控制台会显示当前的fps，在我的笔记本GTX1070中可以达到10fps左右。</p>
+]]></content>
+      <categories>
+        <category>Computer Vision</category>
+      </categories>
+      <tags>
+        <tag>pytorch</tag>
+        <tag>python</tag>
+        <tag>yolov4</tag>
+      </tags>
   </entry>
 </search>
