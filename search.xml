@@ -75,60 +75,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu16.04基础设置及常用软件安装</title>
-    <url>/2020/11/19/18.2.12-ubuntu/</url>
-    <content><![CDATA[<blockquote>
-<p>常用软件：</p>
-<ol>
-<li> 网易云音乐</li>
-<li> inode校园网认证客户端（&gt;ubuntu15.04）</li>
-<li> shadowsocks</li>
-<li> 文本编辑器notepadqq、guake终端</li>
-<li> htop用于查看系统资源占用</li>
-<li> wps office</li>
-<li> QQ</li>
-<li> Psensor监控硬件温度及风扇转速</li>
-</ol>
-</blockquote>
-<h2 id="卸载自带应用"><a href="#卸载自带应用" class="headerlink" title="卸载自带应用"></a>卸载自带应用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove thunderbird（邮箱）</span><br><span class="line">$ sudo apt-get remove  totem （视频播放器）</span><br><span class="line">$ sudo apt-get remove rhythmbox（音乐播放器）</span><br><span class="line">$ sudo apt-get remove empathy </span><br><span class="line">$ sudo apt-get remove brasero</span><br><span class="line">$ sudo apt-get remove simple-scan</span><br><span class="line">$ sudo apt-get remove gnome-mahjongg </span><br><span class="line">$ sudo apt-get remove aisleriot </span><br><span class="line">$ sudo apt-get remove gnome-mines </span><br><span class="line">$ sudo apt-get remove transmission-common </span><br><span class="line">$ sudo apt-get remove gnome-orca </span><br><span class="line">$ sudo apt-get remove webbrowser-app </span><br><span class="line">$ sudo apt-get remove gnome-sudoku</span><br><span class="line">$ sudo apt-get remove unity-webapps-common</span><br><span class="line">$ sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置阿里源"><a href="#设置阿里源" class="headerlink" title="设置阿里源"></a>设置阿里源</h2><p>设置-&gt;软件和更新-&gt;使用阿里云镜像-&gt;其他软件-&gt;Canonical合作伙伴打钩</p>
-<h2 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="解决双系统时间冲突"><a href="#解决双系统时间冲突" class="headerlink" title="解决双系统时间冲突"></a>解决双系统时间冲突</h2><p>ubuntu下终端输入： </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ timedatectl set-local-rtc 1 --adjust-system-clock</span><br><span class="line">$ timedatectl set-ntp 0</span><br></pre></td></tr></table></figure>
-
-<p>在windows下对时即可</p>
-<h2 id="Grub更改默认启动项"><a href="#Grub更改默认启动项" class="headerlink" title="Grub更改默认启动项"></a>Grub更改默认启动项</h2><p>默认情况下Grub会将Linux作为第一启动项，更改默认启动项执行下列命令：<br><code>sudo gedit /etc/default/grub</code><br>将<code>GRUB_DEFAULT=0</code>改为<code>GRUB_DEFAULT=windows引导顺序</code><br>更新Grub：<code>sudo update-grub</code></p>
-<h2 id="更改Grub背景"><a href="#更改Grub背景" class="headerlink" title="更改Grub背景"></a>更改Grub背景</h2><ul>
-<li>将图片放入<code>/boot/grub</code>目录</li>
-<li>更新Grub：<code>sudo update-grub</code></li>
-</ul>
-<h2 id="1-网易云音乐"><a href="#1-网易云音乐" class="headerlink" title="1.网易云音乐"></a>1.网易云音乐</h2><p>下载相对应的Linux deb安装包。<br>下载路径中打开终端，执行下列命令安装：</p>
-<p><code>sudo dpkg \-i packagename.deb</code></p>
-<h2 id="2-shadowsocks"><a href="#2-shadowsocks" class="headerlink" title="2.shadowsocks"></a>2.shadowsocks</h2><p>执行下列命令安装Shadowsocks-qt5：  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-文本编辑器notepadqq、guake终端"><a href="#3-文本编辑器notepadqq、guake终端" class="headerlink" title="3.文本编辑器notepadqq、guake终端"></a>3.文本编辑器notepadqq、guake终端</h2><p>输入下列命令添加ppa软件源并安装：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepadqq：</span><br><span class="line">$ sudo add-apt-repository ppa:notepadqq-team/notepadqq</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install notepadqq</span><br><span class="line"></span><br><span class="line">guake：</span><br><span class="line">$ sudo add-apt-repository ppa:webupd8team/unstable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-htop查看系统资源占用"><a href="#4-htop查看系统资源占用" class="headerlink" title="4.htop查看系统资源占用"></a>4.htop查看系统资源占用</h2><p><code>sudo apt-get install htop</code></p>
-<h2 id="5-wps-office"><a href="#5-wps-office" class="headerlink" title="5.wps office"></a>5.wps office</h2><p>这里(<a href="http://community.wps.cn/download/)%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85%EF%BC%9A">http://community.wps.cn/download/)下载安装包，执行下列命令安装：</a><br><code>sudo dpkg \-i packagename.deb</code><br>打开应用如果提示字体缺失，下载字体wps_symbol_fonts，创建目录：<br><code>sudo mkdir /usr/share/fonts/wps-office</code><br>将下载的字体复制到创建的目录：<br><code>sudo cp \-r fonts_name.zip /usr/share/fonts/wps-office</code><br>进入到创建的目录解压字体包：<br><code>sudo unzip fonts_name.zip</code><br>解压后将压缩包删除：<br><code>sudo rm \-r fonts_name.zip</code></p>
-<h2 id="6-qq"><a href="#6-qq" class="headerlink" title="6.qq"></a>6.qq</h2><p>首先安装wine：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:wine/wine-builds</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install winehq-devel</span><br></pre></td></tr></table></figure>
-
-<p>下载wineqq，执行命令安装至根目录下：<br><code>tar xvf wineQQ8.9_19990.tar.xz \-C ~/</code></p>
-<h2 id="7-Psensor监控硬件温度及风扇转速"><a href="#7-Psensor监控硬件温度及风扇转速" class="headerlink" title="7.Psensor监控硬件温度及风扇转速"></a>7.Psensor监控硬件温度及风扇转速</h2><p>首先安装下面两个工具：<br><code>sudo apt-get install lm-sensors hddtemp</code><br>检测传感器：<br><code>sudo sensors-detect</code><br>安装Psensor：<br><code>sudo apt-get install psensor</code><br>运行程序可以进行监控状态、开机启动等设置</p>
-<p><strong>参考网址：</strong><br><a href="http://blog.csdn.net/Bleachswh/article/details/51295861?locationNum=9">Ubuntu 16.04 安装 Notepadqq</a><br><a href="http://blog.csdn.net/u011557212/article/details/53234134">Ubuntu 16.04 安装网易云音乐</a><br><a href="http://blog.csdn.net/lj402159806/article/details/54695651">Ubuntu 16.04 安装后续要做的事</a><br><a href="http://blog.csdn.net/u012260238/article/details/52716592">安装完ubuntu系统后的优化</a><br><a href="https://www.cnblogs.com/jerrybaby/p/6677013.html">ubuntu ：安装一个方便的终端工具，Guake Terminal</a><br><a href="http://blog.csdn.net/tmosk/article/details/78015680">ubuntu16.04下安装新版QQ</a></p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>常用Linux软件安装</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用GitHub Pages和Hexo快速建立私人Blog（1）</title>
     <url>/2020/11/19/18.2.1-build%20your%20blog/</url>
     <content><![CDATA[<blockquote>
@@ -189,6 +135,91 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu16.04基础设置及常用软件安装</title>
+    <url>/2020/11/19/18.2.12-ubuntu/</url>
+    <content><![CDATA[<blockquote>
+<p>常用软件：</p>
+<ol>
+<li> 网易云音乐</li>
+<li> inode校园网认证客户端（&gt;ubuntu15.04）</li>
+<li> shadowsocks</li>
+<li> 文本编辑器notepadqq、guake终端</li>
+<li> htop用于查看系统资源占用</li>
+<li> wps office</li>
+<li> QQ</li>
+<li> Psensor监控硬件温度及风扇转速</li>
+</ol>
+</blockquote>
+<h2 id="卸载自带应用"><a href="#卸载自带应用" class="headerlink" title="卸载自带应用"></a>卸载自带应用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get remove thunderbird（邮箱）</span><br><span class="line">$ sudo apt-get remove  totem （视频播放器）</span><br><span class="line">$ sudo apt-get remove rhythmbox（音乐播放器）</span><br><span class="line">$ sudo apt-get remove empathy </span><br><span class="line">$ sudo apt-get remove brasero</span><br><span class="line">$ sudo apt-get remove simple-scan</span><br><span class="line">$ sudo apt-get remove gnome-mahjongg </span><br><span class="line">$ sudo apt-get remove aisleriot </span><br><span class="line">$ sudo apt-get remove gnome-mines </span><br><span class="line">$ sudo apt-get remove transmission-common </span><br><span class="line">$ sudo apt-get remove gnome-orca </span><br><span class="line">$ sudo apt-get remove webbrowser-app </span><br><span class="line">$ sudo apt-get remove gnome-sudoku</span><br><span class="line">$ sudo apt-get remove unity-webapps-common</span><br><span class="line">$ sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置阿里源"><a href="#设置阿里源" class="headerlink" title="设置阿里源"></a>设置阿里源</h2><p>设置-&gt;软件和更新-&gt;使用阿里云镜像-&gt;其他软件-&gt;Canonical合作伙伴打钩</p>
+<h2 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="解决双系统时间冲突"><a href="#解决双系统时间冲突" class="headerlink" title="解决双系统时间冲突"></a>解决双系统时间冲突</h2><p>ubuntu下终端输入： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ timedatectl set-local-rtc 1 --adjust-system-clock</span><br><span class="line">$ timedatectl set-ntp 0</span><br></pre></td></tr></table></figure>
+
+<p>在windows下对时即可</p>
+<h2 id="Grub更改默认启动项"><a href="#Grub更改默认启动项" class="headerlink" title="Grub更改默认启动项"></a>Grub更改默认启动项</h2><p>默认情况下Grub会将Linux作为第一启动项，更改默认启动项执行下列命令：<br><code>sudo gedit /etc/default/grub</code><br>将<code>GRUB_DEFAULT=0</code>改为<code>GRUB_DEFAULT=windows引导顺序</code><br>更新Grub：<code>sudo update-grub</code></p>
+<h2 id="更改Grub背景"><a href="#更改Grub背景" class="headerlink" title="更改Grub背景"></a>更改Grub背景</h2><ul>
+<li>将图片放入<code>/boot/grub</code>目录</li>
+<li>更新Grub：<code>sudo update-grub</code></li>
+</ul>
+<h2 id="1-网易云音乐"><a href="#1-网易云音乐" class="headerlink" title="1.网易云音乐"></a>1.网易云音乐</h2><p>下载相对应的Linux deb安装包。<br>下载路径中打开终端，执行下列命令安装：</p>
+<p><code>sudo dpkg \-i packagename.deb</code></p>
+<h2 id="2-shadowsocks"><a href="#2-shadowsocks" class="headerlink" title="2.shadowsocks"></a>2.shadowsocks</h2><p>执行下列命令安装Shadowsocks-qt5：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-文本编辑器notepadqq、guake终端"><a href="#3-文本编辑器notepadqq、guake终端" class="headerlink" title="3.文本编辑器notepadqq、guake终端"></a>3.文本编辑器notepadqq、guake终端</h2><p>输入下列命令添加ppa软件源并安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepadqq：</span><br><span class="line">$ sudo add-apt-repository ppa:notepadqq-team/notepadqq</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install notepadqq</span><br><span class="line"></span><br><span class="line">guake：</span><br><span class="line">$ sudo add-apt-repository ppa:webupd8team/unstable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install guake</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-htop查看系统资源占用"><a href="#4-htop查看系统资源占用" class="headerlink" title="4.htop查看系统资源占用"></a>4.htop查看系统资源占用</h2><p><code>sudo apt-get install htop</code></p>
+<h2 id="5-wps-office"><a href="#5-wps-office" class="headerlink" title="5.wps office"></a>5.wps office</h2><p>这里(<a href="http://community.wps.cn/download/)%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85%EF%BC%9A">http://community.wps.cn/download/)下载安装包，执行下列命令安装：</a><br><code>sudo dpkg \-i packagename.deb</code><br>打开应用如果提示字体缺失，下载字体wps_symbol_fonts，创建目录：<br><code>sudo mkdir /usr/share/fonts/wps-office</code><br>将下载的字体复制到创建的目录：<br><code>sudo cp \-r fonts_name.zip /usr/share/fonts/wps-office</code><br>进入到创建的目录解压字体包：<br><code>sudo unzip fonts_name.zip</code><br>解压后将压缩包删除：<br><code>sudo rm \-r fonts_name.zip</code></p>
+<h2 id="6-qq"><a href="#6-qq" class="headerlink" title="6.qq"></a>6.qq</h2><p>首先安装wine：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:wine/wine-builds</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install winehq-devel</span><br></pre></td></tr></table></figure>
+
+<p>下载wineqq，执行命令安装至根目录下：<br><code>tar xvf wineQQ8.9_19990.tar.xz \-C ~/</code></p>
+<h2 id="7-Psensor监控硬件温度及风扇转速"><a href="#7-Psensor监控硬件温度及风扇转速" class="headerlink" title="7.Psensor监控硬件温度及风扇转速"></a>7.Psensor监控硬件温度及风扇转速</h2><p>首先安装下面两个工具：<br><code>sudo apt-get install lm-sensors hddtemp</code><br>检测传感器：<br><code>sudo sensors-detect</code><br>安装Psensor：<br><code>sudo apt-get install psensor</code><br>运行程序可以进行监控状态、开机启动等设置</p>
+<p><strong>参考网址：</strong><br><a href="http://blog.csdn.net/Bleachswh/article/details/51295861?locationNum=9">Ubuntu 16.04 安装 Notepadqq</a><br><a href="http://blog.csdn.net/u011557212/article/details/53234134">Ubuntu 16.04 安装网易云音乐</a><br><a href="http://blog.csdn.net/lj402159806/article/details/54695651">Ubuntu 16.04 安装后续要做的事</a><br><a href="http://blog.csdn.net/u012260238/article/details/52716592">安装完ubuntu系统后的优化</a><br><a href="https://www.cnblogs.com/jerrybaby/p/6677013.html">ubuntu ：安装一个方便的终端工具，Guake Terminal</a><br><a href="http://blog.csdn.net/tmosk/article/details/78015680">ubuntu16.04下安装新版QQ</a></p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>常用Linux软件安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu16.04源码安装OpenCV2.4.13</title>
+    <url>/2020/11/19/18.2.15-ubuntu_opencv/</url>
+    <content><![CDATA[<h2 id="0x00-准备"><a href="#0x00-准备" class="headerlink" title="0x00 准备"></a>0x00 准备</h2><h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h3><p>输入<code>cmake \--version</code>查看是否已安装CMake，若有版本信息请跳过这一步</p>
+<p>点击<a href="https://cmake.org/download/">这里</a>下载CMake最新版<br>下载后解压，进入安装目录执行：  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ./bootstrap</span><br><span class="line">$ sudo make -jn(n并行线程数，根据CPU决定)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+
+<p>输入<code>cmake \--version</code>查看版本是否正确</p>
+<h3 id="安装编译工具"><a href="#安装编译工具" class="headerlink" title="安装编译工具"></a><a href="#%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7" title="安装编译工具"></a>安装编译工具</h3><p><code>sudo apt-get install build-essential</code></p>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%8C%85" title="安装依赖包"></a>安装依赖包</h3><p><code>sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</code></p>
+<h3 id="安装可选包"><a href="#安装可选包" class="headerlink" title="安装可选包"></a><a href="#%E5%AE%89%E8%A3%85%E5%8F%AF%E9%80%89%E5%8C%85" title="安装可选包"></a>安装可选包</h3><p><code>sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></p>
+<h2 id="0x01-编译OpenCV"><a href="#0x01-编译OpenCV" class="headerlink" title="0x01 编译OpenCV"></a><a href="#0x01-%E7%BC%96%E8%AF%91OpenCV" title="0x01 编译OpenCV"></a>0x01 编译OpenCV</h2><h3 id="下载OpenCV"><a href="#下载OpenCV" class="headerlink" title="下载OpenCV"></a><a href="#%E4%B8%8B%E8%BD%BDOpenCV" title="下载OpenCV"></a>下载OpenCV</h3><p>点击<a href="https://github.com/Itseez/opencv/archive/2.4.13.zip">这里</a>下载OpenCV2.4.13。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a><a href="#%E7%BC%96%E8%AF%91" title="编译"></a>编译</h3><p>解压后执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> opencv-2.4.13</span><br><span class="line">$ mkdir build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> ..</span><br><span class="line">$ sudo make -j8</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<h2 id="0x03环境配置"><a href="#0x03环境配置" class="headerlink" title="0x03环境配置"></a><a href="#0x03%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" title="0x03环境配置"></a>0x03环境配置</h2><p><code>sudo gedit /etc/ld.so.conf.d/opencv.conf</code><br>末尾加入<code>/usr/local/lib</code>，保存退出<br><code>sudo ldconfig</code> 使配置生效</p>
+<p><code>sudo gedit /etc/bash.bashrc</code><br>末尾加入  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PKG_CONFIG_PATH=<span class="variable">$PKG_CONFIG_PATH</span>:/usr/<span class="built_in">local</span>/lib/pkgconfig</span><br><span class="line"><span class="built_in">export</span> PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
+
+<p>切换<code>root</code>用户执行<code>source /etc/bash.bashrc</code><br><code>Ctrl+d</code>退出<code>root</code>用户<br><code>sudo updatedb</code></p>
+]]></content>
+      <categories>
+        <category>Open CV</category>
+      </categories>
+      <tags>
+        <tag>CMake</tag>
+        <tag>Open CV build</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TUM_fastfusion</title>
     <url>/2020/11/19/18.2.16-fastfution/</url>
     <content><![CDATA[<blockquote>
@@ -220,37 +251,6 @@
         <tag>Ubuntu</tag>
         <tag>SLAM实时构图</tag>
         <tag>单目深度估计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu16.04源码安装OpenCV2.4.13</title>
-    <url>/2020/11/19/18.2.15-ubuntu_opencv/</url>
-    <content><![CDATA[<h2 id="0x00-准备"><a href="#0x00-准备" class="headerlink" title="0x00 准备"></a>0x00 准备</h2><h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h3><p>输入<code>cmake \--version</code>查看是否已安装CMake，若有版本信息请跳过这一步</p>
-<p>点击<a href="https://cmake.org/download/">这里</a>下载CMake最新版<br>下载后解压，进入安装目录执行：  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo ./bootstrap</span><br><span class="line">$ sudo make -jn(n并行线程数，根据CPU决定)</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-
-<p>输入<code>cmake \--version</code>查看版本是否正确</p>
-<h3 id="安装编译工具"><a href="#安装编译工具" class="headerlink" title="安装编译工具"></a><a href="#%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7" title="安装编译工具"></a>安装编译工具</h3><p><code>sudo apt-get install build-essential</code></p>
-<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%8C%85" title="安装依赖包"></a>安装依赖包</h3><p><code>sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</code></p>
-<h3 id="安装可选包"><a href="#安装可选包" class="headerlink" title="安装可选包"></a><a href="#%E5%AE%89%E8%A3%85%E5%8F%AF%E9%80%89%E5%8C%85" title="安装可选包"></a>安装可选包</h3><p><code>sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></p>
-<h2 id="0x01-编译OpenCV"><a href="#0x01-编译OpenCV" class="headerlink" title="0x01 编译OpenCV"></a><a href="#0x01-%E7%BC%96%E8%AF%91OpenCV" title="0x01 编译OpenCV"></a>0x01 编译OpenCV</h2><h3 id="下载OpenCV"><a href="#下载OpenCV" class="headerlink" title="下载OpenCV"></a><a href="#%E4%B8%8B%E8%BD%BDOpenCV" title="下载OpenCV"></a>下载OpenCV</h3><p>点击<a href="https://github.com/Itseez/opencv/archive/2.4.13.zip">这里</a>下载OpenCV2.4.13。</p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a><a href="#%E7%BC%96%E8%AF%91" title="编译"></a>编译</h3><p>解压后执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> opencv-2.4.13</span><br><span class="line">$ mkdir build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> ..</span><br><span class="line">$ sudo make -j8</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
-
-<h2 id="0x03环境配置"><a href="#0x03环境配置" class="headerlink" title="0x03环境配置"></a><a href="#0x03%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" title="0x03环境配置"></a>0x03环境配置</h2><p><code>sudo gedit /etc/ld.so.conf.d/opencv.conf</code><br>末尾加入<code>/usr/local/lib</code>，保存退出<br><code>sudo ldconfig</code> 使配置生效</p>
-<p><code>sudo gedit /etc/bash.bashrc</code><br>末尾加入  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">PKG_CONFIG_PATH=<span class="variable">$PKG_CONFIG_PATH</span>:/usr/<span class="built_in">local</span>/lib/pkgconfig</span><br><span class="line"><span class="built_in">export</span> PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
-
-<p>切换<code>root</code>用户执行<code>source /etc/bash.bashrc</code><br><code>Ctrl+d</code>退出<code>root</code>用户<br><code>sudo updatedb</code></p>
-]]></content>
-      <categories>
-        <category>Open CV</category>
-      </categories>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>CMake</tag>
-        <tag>Open CV build</tag>
       </tags>
   </entry>
   <entry>
